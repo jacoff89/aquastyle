@@ -3,7 +3,7 @@ name: Деплой на прод сервер
 on:
   push:
     branches:
-      - main  # Запускать при пуше в ветку main
+      - main  # Запускать при пуше в ветку main1
 
 jobs:
   deploy:
@@ -60,4 +60,7 @@ jobs:
             # Настраиваем хранилище и очищаем кеш
             docker exec -i aquastyle-php-fpm-prod php artisan storage:link
             docker exec -i aquastyle-php-fpm-prod php artisan config:cache
+
+            # Билдим фронтенд
+            docker compose run --rm nodejs
           '

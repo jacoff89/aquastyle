@@ -39,5 +39,15 @@ services:
       - "${MYSQL_PORT}:3306"
     restart: unless-stopped
 
+  nodejs:
+    image: node:25
+    container_name: aquastyle-nodejs-prod
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    command: sh -c "npm ci && npm run build && rm -rf node_modules && chown -R ${UID}:${GID} public/build"
+    profiles:
+      - prod
+
 volumes:
   aquastyle-db-data-prod:
