@@ -46,7 +46,7 @@
                             <ul class="contacts-classic">
                                 <li><span class="contacts-classic-title">Позвоните нам:</span> <a href="tel:+73512353524">+7 (351) 235-35-24</a>
                                 </li>
-                                <li><a href="mailto:#">info@demolink.org</a></li>
+                                <li><a href="mailto:aquastyl74@mail.ru">aquastyl74@mail.ru</a></li>
                             </ul>
                         </div>
                         <!-- RD Navbar Panel-->
@@ -54,7 +54,7 @@
                             <!-- RD Navbar Toggle-->
                             <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                             <!-- RD Navbar Brand-->
-                            <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-120x45.png" alt="" width="120" height="45" srcset="images/logo-default-240x90.png 2x"/><img class="brand-logo-light" src="images/logo-inverse-119x43.png" alt="" width="119" height="43" srcset="images/logo-inverse-238x87.png 2x"/></a>
+                            <div class="rd-navbar-brand"><a class="brand" href="#"><img class="brand-logo-dark" src="images/logo-default-120x45.png" alt="" width="120" height="45" srcset="images/logo-default-240x90.png 2x"/><img class="brand-logo-light icon-circle" src="images/custom_logo.jpg" alt="" width="119" height="43" srcset="images/custom_logo.jpg 2x"/></a>
                             </div>
                         </div>
                         <div class="rd-navbar-aside-element">
@@ -104,44 +104,10 @@
                                     </ul>
                                 </li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="grid-gallery.html">Галерея</a>
-                                    <!-- RD Navbar Dropdown-->
-                                    <ul class="rd-menu rd-navbar-dropdown">
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-gallery.html">Grid Галерея</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-fullwidth-gallery.html">Grid Fullwidth Галерея</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="masonry-gallery.html">Masonry Галерея</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="masonry-fullwidth-gallery.html">Masonry Fullwidth Галерея</a></li>
-                                    </ul>
                                 </li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="#">Elements</a>
-                                    <!-- RD Navbar Megamenu-->
-                                    <ul class="rd-menu rd-navbar-megamenu">
-                                        <li class="rd-megamenu-item">
-                                            <div class="rd-megamenu-title"><span class="rd-megamenu-icon mdi mdi-apps"></span><span class="rd-megamenu-text">Elements</span></div>
-                                            <ul class="rd-megamenu-list rd-megamenu-list-2">
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="icon-lists.html">Icon lists</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="progress-bars.html">Progress bars</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="calls-to-action.html">Calls to action</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-and-accordions.html">Tabs &amp; accordions</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tables.html">Tables</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="counters.html">Counters</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid-system.html">Grid system</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="rd-megamenu-item flex-grow-1 flex-shrink-0">
-                                            <div class="rd-megamenu-title"><span class="rd-megamenu-icon mdi mdi-layers"></span><span class="rd-megamenu-text">Additional pages</span></div>
-                                            <ul class="rd-megamenu-list">
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404-page.html">404 Page</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="privacy-policy.html">Политика конфиденциальности</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search Results</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">Контакты</a>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">Контакты</a>
                                 </li>
                             </ul>
                         </div>
@@ -151,28 +117,28 @@
         </div>
     </header>
     <!-- Swiper-->
-    <section class="section swiper-container swiper-slider swiper-slider-4" data-loop="true" data-autoplay="4000" data-simulate-touch="false">
+    <section class="section swiper-container swiper-slider swiper-slider-4" data-loop="true" data-autoplay="6000" data-simulate-touch="false">
         <div class="swiper-wrapper context-dark">
-            <div class="swiper-slide swiper-slide-1" data-slide-bg="images/slide-1.jpg">
+            <div class="swiper-slide swiper-slide-1" data-slide-bg="images/slide-2.jpg">
                 <div class="swiper-slide-caption section-md text-sm-start">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-8 col-md-8 col-xl-7">
-                                <h1 class="swiper-title-1 text-spacing-0" data-caption-animate="fadeInLeft" data-caption-delay="100">Наслаждайтесь подводным миром<br class="d-none d-xl-block"> Ныряйте с нами</h1>
-                                <h6 class="swiper-title-2 text-width-medium font-sec text-white-lighter" data-caption-animate="fadeInLeft" data-caption-delay="250">Мы предлагаем широкий выбор туров и мест для подводного плавания с аквалангом для всех желающих.</h6>
+                                <h1 class="swiper-title-1" data-caption-animate="fadeInLeft" data-caption-delay="100">Дайвинг-центр "Аквастиль"<br class="d-none d-xl-block"> В Челябинске на Урале</h1>
+                                <h5 class="swiper-title-2 text-width-medium font-sec text-white-lighter" data-caption-animate="fadeInLeft" data-caption-delay="250">Дайвинг, подводная охота, фридайвинг. Обучение от новичка до инструктора.</h5>
                                 <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="400"><a class="button button-lg button-shadow-4 button-secondary button-zakaria" href="#">Подробнее</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide swiper-slide-1" data-slide-bg="images/slide-2.jpg">
+            <div class="swiper-slide swiper-slide-1" data-slide-bg="images/slide-1.jpg">
                 <div class="swiper-slide-caption section-md text-sm-start">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-8 col-md-8 col-xl-7">
-                                <h1 class="swiper-title-1" data-caption-animate="fadeInLeft" data-caption-delay="100">Лучшее оборудование<br class="d-none d-xl-block"> и инструкторы</h1>
-                                <h6 class="swiper-title-2 text-width-medium font-sec text-white-lighter" data-caption-animate="fadeInLeft" data-caption-delay="250">Наша команда и первоклассное оборудование гарантируют незабываемые погружения.</h6>
+                                <h1 class="swiper-title-1 text-spacing-0" data-caption-animate="fadeInLeft" data-caption-delay="100">Наслаждайтесь подводным миром<br class="d-none d-xl-block"> Ныряйте с нами</h1>
+                                <h5 class="swiper-title-2 text-width-medium font-sec text-white-lighter" data-caption-animate="fadeInLeft" data-caption-delay="250">Мы предлагаем широкий выбор туров и мест для подводного плавания с аквалангом для всех желающих.</h5>
                                 <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="400"><a class="button button-lg button-shadow-4 button-secondary button-zakaria" href="#">Подробнее</a></div>
                             </div>
                         </div>
@@ -812,46 +778,51 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-7 col-lg-5 wow fadeInRight" data-wow-delay=".1s">
-                        <h5 class="footer-modern-title">Quick Links</h5>
+                        <h5 class="footer-modern-title">Меню</h5>
                         <ul class="footer-modern-list footer-modern-list-2 d-sm-inline-block d-md-block">
-                            <li><a href="about-us.html">О нас</a></li>
-                            <li><a href="what-we-offer.html">Наши услуги</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Наши услуги</a></li>
                             <li><a href="#">FAQ</a></li>
-                            <li><a href="our-team.html">Instructors</a></li>
-                            <li><a href="contact-us.html">Contact Us</a></li>
-                            <li><a href="grid-blog.html">Блог</a></li>
-                            <li><a href="grid-gallery.html">Галерея</a></li>
-                            <li><a href="pricing-list.html">Pricing</a></li>
+                            <li><a href="#">Instructors</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">Галерея</a></li>
+                            <li><a href="#">Pricing</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3 wow fadeInRight" data-wow-delay=".2s">
-                        <h5 class="footer-modern-title">Get in touch</h5>
+                        <h5 class="footer-modern-title">Связаться с нами</h5>
                         <ul class="contacts-creative">
                             <li>
+                                <div class="unit unit-spacing-sm flex-column flex-md-row mb-0">
+                                    <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
+                                    <div class="unit-body"><a href="#">Бассейн - г. Челябинск, <br/>ул. 50-летия ВЛКСМ, 14</a></div>
+                                </div>
+                                <div class="unit unit-spacing-sm flex-column flex-md-row mb-0">
+                                    <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
+                                    <div class="unit-body"><a href="#">Офис - г. Челябинск, <br/>ул. Косарева, д.6, оф. 107</a></div>
+                                </div>
                                 <div class="unit unit-spacing-sm flex-column flex-md-row">
                                     <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                                    <div class="unit-body"><a href="#">523 Sylvan Ave, 5th Floor<br/>Mountain View, CA 94041 USA</a></div>
+                                    <div class="unit-body"><a href="#">о. Увильды, б.о. "Чайка"</a></div>
                                 </div>
                             </li>
                             <li>
                                 <div class="unit unit-spacing-sm flex-column flex-md-row">
                                     <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                                    <div class="unit-body"><a href="tel:#">+1 (844) 123 456 78</a></div>
+                                    <div class="unit-body"><a href="tel:#">+7 (351) 235-35-24</a></div>
                                 </div>
                             </li>
                             <li>
                                 <div class="unit unit-spacing-sm flex-column flex-md-row">
                                     <div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
-                                    <div class="unit-body"><a href="mailto:#">info@demolink.org</a></div>
+                                    <div class="unit-body"><a href="mailto:aquastyl74@mail.ru">aquastyl74@mail.ru</a></div>
                                 </div>
                             </li>
                         </ul>
                         <ul class="list-inline list-social-3 list-inline-sm">
-                            <li><a class="icon mdi mdi-facebook icon-xxs" href="#"></a></li>
-                            <li><a class="icon mdi mdi-twitter icon-xxs" href="#"></a></li>
-                            <li><a class="icon mdi mdi-instagram icon-xxs" href="#"></a></li>
-                            <li><a class="icon mdi mdi-google-plus icon-xxs" href="#"></a></li>
-                            <li><a class="icon mdi mdi-skype icon-xxs" href="#"></a></li>
+                            <li><a class="icon mdi mdi-instagram icon-xxs" href="https://www.instagram.com/aquastyle74" target="_blank"></a></li>
+                            <li><a class="icon mdi icon-xxs" href="https://vk.com/aquastyle74" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2m3.08 14.27h-1.46c-.55 0-.72-.45-1.69-1.44c-.88-.83-1.26-.95-1.47-.95c-.29 0-.38.08-.38.5v1.31c0 .35-.11.57-1.04.57c-1.54 0-3.25-.94-4.45-2.67c-1.81-2.54-2.3-4.46-2.3-4.84c0-.21.07-.41.49-.41h1.47c.37 0 .51.16.65.56c.72 2.1 1.92 3.9 2.41 3.9c.19 0 .27-.09.27-.55V10.1c-.05-.98-.58-1.07-.58-1.42c0-.18.14-.34.37-.34h2.29c.31 0 .42.16.42.54v2.89c0 .31.13.42.23.42c.18 0 .34-.11.67-.45c1.05-1.17 1.8-2.98 1.8-2.98c.1-.21.26-.41.65-.41h1.43c.44 0 .54.23.44.54c-.18.85-1.96 3.36-1.94 3.36c-.16.25-.22.36 0 .65c.15.21.66.65 1 1.04c.62.71 1.1 1.3 1.23 1.71c.11.41-.09.62-.51.62z" fill="currentColor"/></svg></a></li>
                         </ul>
                     </div>
                 </div>
@@ -859,7 +830,7 @@
         </div>
         <div class="footer-modern-panel text-center">
             <div class="container">
-                <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Divers</span><span>.&nbsp; All rights reserved.</span><span>&nbsp;</span><a href="privacy-policy.html">Политика конфиденциальности.</a></p>
+                <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Дайвинг-центр "Аквастиль"</span><span>.&nbsp; Все права защищены.</span><span>&nbsp;</span><a href="privacy-policy.html">Политика конфиденциальности.</a></p>
             </div>
         </div>
     </footer>
