@@ -3,7 +3,7 @@
 	let
 		userAgent = navigator.userAgent.toLowerCase(),
 		isIE = userAgent.indexOf("msie") !== -1 ? parseInt(userAgent.split("msie")[1], 10) : userAgent.indexOf("trident") !== -1 ? 11 : userAgent.indexOf("edge") !== -1 ? 12 : false;
-	
+
 	// Unsupported browsers
 	if (isIE !== false && isIE < 12) {
 		console.warn("[Core] detected IE" + isIE + ", load alert");
@@ -11,23 +11,23 @@
 		script.src = "./js/support.js";
 		document.querySelector("head").appendChild(script);
 	}
-	
+
 	let
 		initialDate = new Date(),
-		
+
 		$document = $(document),
 		$window = $(window),
 		$html = $("html"),
 		$body = $("body"),
-		
+
 		isDesktop = $html.hasClass("desktop"),
 		isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
 		isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1,
 		isRtl = $html.attr("dir") === "rtl",
 		windowReady = false,
 		isNoviBuilder = false,
-		
-		
+
+
 		plugins = {
 			bootstrapTooltip: $("[data-bs-toggle='tooltip']"),
 			bootstrapTabs: $(".tabs-custom"),
@@ -493,7 +493,7 @@
 			var regularConstraintsMessages = [
 				{
 					type: regula.Constraint.Required,
-					newMessage: "The text field is required."
+					newMessage: "Поле должно быть заполнено."
 				},
 				{
 					type: regula.Constraint.Email,
@@ -501,7 +501,7 @@
 				},
 				{
 					type: regula.Constraint.Numeric,
-					newMessage: "Only numbers are required"
+					newMessage: "Поле должно содержать только цифры"
 				},
 				{
 					type: regula.Constraint.Selected,
@@ -1452,13 +1452,13 @@
 		if (plugins.rdMailForm.length) {
 			var i, j, k,
 				msg = {
-					'MF000': 'Successfully sent!',
-					'MF001': 'Recipients are not set!',
-					'MF002': 'Form will not work locally!',
-					'MF003': 'Please, define email field in your form!',
-					'MF004': 'Please, define type of your form!',
-					'MF254': 'Something went wrong with PHPMailer!',
-					'MF255': 'Aw, snap! Something went wrong.'
+					'MF000': ' Заявка успешно отправлена! Скоро мы свяжемся с вами',
+					'MF001': 'Получатели не установлены!',
+					'MF002': 'Форма не будет работать локально!',
+					'MF003': 'Пожалуйста, укажите поле электронной почты в вашей форме!',
+					'MF004': 'Пожалуйста, определите тип вашей формы!',
+					'MF254': 'Что-то пошло не так с PHPMailer!',
+					'MF255': 'О, щелчок! Что-то пошло не так.'
 				};
 
 			for (i = 0; i < plugins.rdMailForm.length; i++) {
@@ -1526,7 +1526,7 @@
 							form.addClass('form-in-process');
 
 							if (output.hasClass("snackbars")) {
-								output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Sending</span></p>');
+								output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Идет отправка</span></p>');
 								output.addClass("active");
 							}
 						} else {

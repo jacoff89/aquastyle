@@ -586,28 +586,43 @@
     <section class="parallax-container" data-parallax-img="images/parallax-4.jpg">
         <div class="parallax-content section-xxl context-dark text-md-left">
             <div class="container">
-                <div class="row row-30 justify-content-center align-items-center align-items-md-end">
-                    <div class="col-lg-3">
-                        <h3 class="text-spacing-0 wow fadeInLeft">Записаться</h3>
-                        <p class="text-opacity-70 wow fadeInLeft" data-wow-delay=".1s">Подписаться to our newsletter</p>
-                    </div>
-                    <div class="col-lg-9 inset-lg-bottom-10">
-                        <!-- RD Mailform-->
-                        <form class="rd-form rd-mailform rd-form-inline form-lg rd-form-text-center" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                            <div class="form-wrap wow fadeInUp">
-                                <input class="form-input" id="subscribe-form-0-email" type="email" name="email" data-constraints=""/>
-                                <label class="form-label" for="subscribe-form-0-email">Enter your e-mail address</label>
+                <h3 class="text-spacing-0 mb-lg-5">Оставьте заявку и мы вам позвоним</h3>
+                <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="contact/send">
+                    @csrf
+                    <div class="row row-20 row-md-30">
+                        <div class="col-lg-8">
+                            <div class="row row-20 row-md-30">
+                                <div class="col-sm-6">
+                                    <div class="form-wrap">
+                                        <input class="form-input" id="contact-first-name" type="text" name="name" data-constraints='@@Required(message="Введите имя")'/>
+                                        <label class="form-label" for="contact-first-name">Ваше имя</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-wrap">
+                                        <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints='@@Required(message="Введите телефон")'/>
+                                        <label class="form-label" for="contact-phone">Телефон</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-wrap">
+                                        <label class="checkbox-inline">
+                                            <input name="input-checkbox" value="checkbox" type="checkbox">
+                                            <span class="context-dark">Я согласен на обработку моих <a class="context-dark" href="#">персональных данных</a></span>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-button wow fadeInRight">
-                                <button class="button button-shadow-2 button-zakaria button-lg button-secondary" type="submit">Оставить заявку</button>
-                            </div>
-                        </form>
+                        </div>
+                        <div class="col-lg-4">
+                            <button class="button button-lg button-secondary button-zakaria" type="submit">Оставить заявку</button>
+                        </div>
                     </div>
-                </div>
+
+                </form>
             </div>
         </div>
     </section>
-
     <!-- Instructors-->
     <section class="section section-xxl bg-default">
         <div class="container">
@@ -635,7 +650,7 @@
                     </ul>--}}
                 </article>
                 <article class="team-modern box-sm wow slideInUp" data-wow-delay=".2s"><a class="team-modern-figure" href="#"><img src="images/team-6-270x227.jpg" alt="" width="270" height="227"/></a>
-                    <h5 class="team-modern-name"><a href="#">Листышенков Алексей</a></h5>
+                    <h5 class="team-modern-name"><a href="#">Листишенков Алексей</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
                         <li><a class="icon mdi mdi-facebook" href="#"></a></li>
