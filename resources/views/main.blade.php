@@ -35,7 +35,7 @@
 </div>
 <div class="page">
     <!-- Page Header-->
-    <header class="section page-header header-creative-wrap context-dark">
+    <header id="main" class="section page-header header-creative-wrap context-dark">
         <!-- RD Navbar-->
         <div class="rd-navbar-wrap">
             <nav class="rd-navbar rd-navbar-creative rd-navbar-creative-2" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="100px" data-xl-stick-up-offset="112px" data-xxl-stick-up-offset="132px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
@@ -83,31 +83,19 @@
                         <div class="rd-navbar-nav-wrap">
                             <!-- RD Navbar Nav-->
                             <ul class="rd-navbar-nav">
-                                <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Главная</a>
+                                <li class="rd-nav-item active"><a class="rd-nav-link" href="#main">Главная</a>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">Страницы</a>
-                                    <!-- RD Navbar Dropdown-->
-                                    <ul class="rd-menu rd-navbar-dropdown">
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="about-us.html">О нас</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="what-we-offer.html">Наши услуги</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.html">Наша команда</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Отзывы</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="pricing-list.html">Цены</a></li>
-                                    </ul>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#services">Услуги</a>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="grid-blog.html">Блог</a>
-                                    <!-- RD Navbar Dropdown-->
-                                    <ul class="rd-menu rd-navbar-dropdown">
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-blog.html">Grid Блог</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-list.html">Блог List</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Блог Post</a></li>
-                                    </ul>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#about">О нас</a>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="grid-gallery.html">Галерея</a>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#reviews">Отзывы</a>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">Elements</a>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#gallery">Галерея</a>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">Контакты</a>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#team">Инструкторы</a>
+                                </li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#contacts">Контакты</a>
                                 </li>
                             </ul>
                         </div>
@@ -125,8 +113,8 @@
                         <div class="row">
                             <div class="col-sm-8 col-md-8 col-xl-7">
                                 <h1 class="swiper-title-1" data-caption-animate="fadeInLeft" data-caption-delay="100">Дайвинг-центр "Аквастиль"<br class="d-none d-xl-block"> В Челябинске на Урале</h1>
-                                <h5 class="swiper-title-2 text-width-medium font-sec text-white-lighter" data-caption-animate="fadeInLeft" data-caption-delay="250">Дайвинг, подводная охота, фридайвинг. Обучение от новичка до инструктора.</h5>
-                                <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="400"><a class="button button-lg button-shadow-4 button-secondary button-zakaria" href="#">Подробнее</a></div>
+                                <h5 class="swiper-title-2 text-width-medium font-sec" data-caption-animate="fadeInLeft" data-caption-delay="250">Дайвинг, подводная охота, фридайвинг. Обучение от новичка до инструктора.</h5>
+                                <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="400"><a class="button button-lg button-shadow-4 button-secondary button-zakaria" href="#form">Оставить заявку</a></div>
                             </div>
                         </div>
                     </div>
@@ -138,8 +126,8 @@
                         <div class="row">
                             <div class="col-sm-8 col-md-8 col-xl-7">
                                 <h1 class="swiper-title-1 text-spacing-0" data-caption-animate="fadeInLeft" data-caption-delay="100">Наслаждайтесь подводным миром<br class="d-none d-xl-block"> Ныряйте с нами</h1>
-                                <h5 class="swiper-title-2 text-width-medium font-sec text-white-lighter" data-caption-animate="fadeInLeft" data-caption-delay="250">Мы предлагаем широкий выбор туров и мест для подводного плавания с аквалангом для всех желающих.</h5>
-                                <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="400"><a class="button button-lg button-shadow-4 button-secondary button-zakaria" href="#">Подробнее</a></div>
+                                <h5 class="swiper-title-2 text-width-medium font-sec" data-caption-animate="fadeInLeft" data-caption-delay="250">Мы предлагаем широкий выбор туров и мест для подводного плавания с аквалангом для всех желающих.</h5>
+                                <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="400"><a class="button button-lg button-shadow-4 button-secondary button-zakaria" href="#form">Оставить заявку</a></div>
                             </div>
                         </div>
                     </div>
@@ -153,36 +141,34 @@
         <div class="swiper-button-next"></div>
     </section>
 
-    <!--The Tours-->
-    <section class="section section-lg bg-default">
+    <section id="services" class="section section-lg bg-default">
         <div class="container">
             <h3 class="wow fadeScale">Услуги</h3>
             <!-- Owl Carousel-->
             <div class="owl-carousel owl-style-8" data-items="1" data-sm-items="2" data-lg-items="3" data-margin="30" data-dots="true" data-mouse-drag="false">
-                <article class="box-info-modern wow slideInUp" data-wow-delay=".1s"><a class="box-info-modern-figure" href="#"><img src="images/about-1-340x243.jpg" alt="" width="340" height="243"/></a>
+                <article class="box-info-modern wow slideInUp" data-wow-delay=".1s"><a class="box-info-modern-figure" href="#form"><img src="images/about-1-340x243.jpg" alt="" width="340" height="243"/></a>
                     <h4 class="box-info-modern-title"><a href="#">Базовый курс по дайвингу</a></h4>
                     <div class="box-info-modern-text">Обучение дайвингу (Дайвер 1 звезда). <br>Погружение до 18 метров.</div>
                     <h6 class="box-info-modern-title">от 30 000 рублей</h6>
-                    <a class="box-info-modern-link" href="#">Записаться</a>
+                    <a class="box-info-modern-link" href="#form">Записаться</a>
                 </article>
                 <article class="box-info-modern wow slideInUp"><a class="box-info-modern-figure" href="#"><img src="images/about-2-340x243.jpg" alt="" width="340" height="243"/></a>
-                    <h4 class="box-info-modern-title"><a href="#">Пробное погружение</a></h4>
+                    <h4 class="box-info-modern-title"><a href="#form">Пробное погружение</a></h4>
                     <div class="box-info-modern-text">Inter dive - Пробное погружение Это самый первый и запоминающийся этап знакомства с подводным миром. Для знакомства с дайвингом не требуется специальная подготовка, опыт погружений и обращения со снаряжением. Инструктор все сделает за Вас!</div>
                     <h6 class="box-info-modern-title">от 6 000 рублей</h6>
-                    <a class="box-info-modern-link" href="#">Записаться</a>
+                    <a class="box-info-modern-link" href="#form">Записаться</a>
                 </article>
                 <article class="box-info-modern wow slideInUp" data-wow-delay=".1s"><a class="box-info-modern-figure" href="#"><img src="images/about-3-340x243.jpg" alt="" width="340" height="243"/></a>
-                    <h4 class="box-info-modern-title"><a href="#">Фридайвинг. <br>Базовый курс</a></h4>
+                    <h4 class="box-info-modern-title"><a href="#form">Фридайвинг. <br>Базовый курс</a></h4>
                     <div class="box-info-modern-text">Базовый курс по основам ФРИДАЙВИНГА. Курс по подготовке фридайверов, даст Вам знания и навыки, необходимые для планирования и осуществления погружений на задержке дыхания</div>
                     <h6 class="box-info-modern-title">26 000 рублей</h6>
-                    <a class="box-info-modern-link" href="#">Записаться</a>
+                    <a class="box-info-modern-link" href="#form">Записаться</a>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Services-->
-    <section class="section section-sm bg-image-1 bg-gray-1">
+    <section id="about" class="section section-sm bg-image-1 bg-gray-1">
         <div class="container">
             <h3 class="wow fadeScale pb-5">Вам у нас понравится</h3>
             <div class="row row-xl row-30 row-md-40 row-lg-50 align-items-center">
@@ -413,7 +399,7 @@
     </section>
 
     <!-- Отзывы-->
-    <section class="section section-xxl bg-gray-1">
+    <section id="reviews" class="section section-xxl bg-gray-1">
         <div class="container">
             <h3 class="text-transform-capitalize wow fadeScale">Отзывы</h3>
             <div class="row row-sm row-30 justify-content-center">
@@ -466,7 +452,7 @@
     </section>
 
     <!-- Masonry Галерея-->
-    <section class="section section-xxl bg-default">
+    <section id="gallery" class="section section-xxl bg-default">
         <div class="container">
             <h3 class="text-transform-capitalize wow fadeScale">Галерея</h3>
             <div class="isotope-wrap">
@@ -479,7 +465,7 @@
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
-                                    <h5 class="thumbnail-classic-title"><a href="#">Barracuda Point</a></h5>
+                                    <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
                                         <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/grid-gallery-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-1-270x250.jpg" alt="" width="270" height="250"/></a></div>
                                     </div>
@@ -494,7 +480,7 @@
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
-                                    <h5 class="thumbnail-classic-title"><a href="#">Blue Corner Wall</a></h5>
+                                    <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
                                         <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/masonry-gallery-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-2-270x530.jpg" alt="" width="270" height="530"/></a></div>
                                     </div>
@@ -509,7 +495,7 @@
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
-                                    <h5 class="thumbnail-classic-title"><a href="#">The Yongala</a></h5>
+                                    <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
                                         <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/masonry-gallery-3-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-3-270x250.jpg" alt="" width="270" height="250"/></a></div>
                                     </div>
@@ -524,7 +510,7 @@
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
-                                    <h5 class="thumbnail-classic-title"><a href="#">Thistlegorm</a></h5>
+                                    <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
                                         <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/masonry-gallery-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-4-270x250.jpg" alt="" width="270" height="250"/></a></div>
                                     </div>
@@ -539,7 +525,7 @@
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
-                                    <h5 class="thumbnail-classic-title"><a href="#">Shark and Yolanda Reef</a></h5>
+                                    <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
                                         <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/grid-gallery-3-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-5-270x250.jpg" alt="" width="270" height="250"/></a></div>
                                     </div>
@@ -554,7 +540,7 @@
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
-                                    <h5 class="thumbnail-classic-title"><a href="#">Manta Ray Night Dive</a></h5>
+                                    <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
                                         <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/grid-fullwidth-gallery-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-6-570x530.jpg" alt="" width="570" height="530"/></a></div>
                                     </div>
@@ -569,7 +555,7 @@
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
-                                    <h5 class="thumbnail-classic-title"><a href="#">Great Blue Hole</a></h5>
+                                    <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
                                         <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/masonry-gallery-7-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-7-570x250.jpg" alt="" width="570" height="250"/></a></div>
                                     </div>
@@ -583,7 +569,7 @@
     </section>
 
     <!-- Подписаться to Our Newsletter-->
-    <section class="parallax-container" data-parallax-img="images/parallax-4.jpg">
+    <section id="form" class="parallax-container" data-parallax-img="images/parallax-4.jpg">
         <div class="parallax-content section-xxl context-dark text-md-left">
             <div class="container">
                 <h3 class="text-spacing-0 mb-lg-5">Оставьте заявку и мы вам позвоним</h3>
@@ -624,12 +610,12 @@
         </div>
     </section>
     <!-- Instructors-->
-    <section class="section section-xxl bg-default">
+    <section id="team" class="section section-xxl bg-default">
         <div class="container">
             <h3 class="text-spacing-0 text-transform-capitalize wow fadeScale">Наша команда</h3>
             <!-- Owl Carousel-->
             <div class="owl-carousel owl-style-9" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-margin="30" data-dots="true" data-mouse-drag="false">
-                <article class="team-modern box-sm wow slideInUp"><a class="team-modern-figure" href="#"><img src="images/team-4-270x227.jpg" alt="" width="270" height="227"/></a>
+                <article class="team-modern box-sm wow slideInUp"><img src="images/team-4-270x227.jpg" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Красильников Евгений</a></h5>
                     <p class="team-modern-text">Руководитель, инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -639,7 +625,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".1s"><a class="team-modern-figure" href="#"><img src="images/team-5-270x227.jpg" alt="" width="270" height="227"/></a>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".1s"><img src="images/team-5-270x227.jpg" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Алмазов Константин</a></h5>
                     <p class="team-modern-text">Руководитель направления фридайвинга</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -649,7 +635,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".2s"><a class="team-modern-figure" href="#"><img src="images/team-6-270x227.jpg" alt="" width="270" height="227"/></a>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".2s"><img src="images/team-6-270x227.jpg" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Листишенков Алексей</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -659,7 +645,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><a class="team-modern-figure" href="#"><img src="images/team-7-270x227.jpg" alt="" width="270" height="227"/></a>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="images/team-7-270x227.jpg" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Безрученко Яков</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -669,7 +655,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><a class="team-modern-figure" href="#"><img src="images/team-7-270x227.jpg" alt="" width="270" height="227"/></a>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="images/team-8-270x227.jpg" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Жилина Светлана</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу, инструктор детской секции</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -679,7 +665,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><a class="team-modern-figure" href="#"><img src="images/team-7-270x227.jpg" alt="" width="270" height="227"/></a>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="images/team-2-270x227.jpg" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Глухов Александр</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -689,7 +675,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><a class="team-modern-figure" href="#"><img src="images/team-7-270x227.jpg" alt="" width="270" height="227"/></a>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="images/team-3-270x227.jpg" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Тимофеев Евгений</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -699,7 +685,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><a class="team-modern-figure" href="#"><img src="images/team-7-270x227.jpg" alt="" width="270" height="227"/></a>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="images/team-1-270x227.jpg" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Стремоухов Максим</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -714,7 +700,7 @@
     </section>
 
     <!-- Блог Post-->
-    <section class="section section-xxl bg-gray-1">
+    {{--<section class="section section-xxl bg-gray-1">
         <div class="container">
             <h3 class="text-transform-capitalize text-spacing-0 wow fadeScale">Our Блог</h3>
             <!-- Owl Carousel-->
@@ -760,10 +746,10 @@
                 </article>
             </div>
         </div>
-    </section>
+    </section>--}}
 
     <!-- Page Footer-->
-    <footer class="section footer-modern footer-modern-2">
+    <footer id="contacts" class="section footer-modern footer-modern-2">
         <div class="footer-modern-body section-xl context-dark">
             <div class="container">
                 <div class="row row-40 row-md-50 justify-content-xl-between">
@@ -795,14 +781,13 @@
                     <div class="col-sm-6 col-md-7 col-lg-5 wow fadeInRight" data-wow-delay=".1s">
                         <h5 class="footer-modern-title">Меню</h5>
                         <ul class="footer-modern-list footer-modern-list-2 d-sm-inline-block d-md-block">
-                            <li><a href="#">О нас</a></li>
-                            <li><a href="#">Наши услуги</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Instructors</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Блог</a></li>
-                            <li><a href="#">Галерея</a></li>
-                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#main">Главная</a></li>
+                            <li><a href="#services">Услуги</a></li>
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="#reviews">Отзывы</a></li>
+                            <li><a href="#gallery">Галлерея</a></li>
+                            <li><a href="#team">Инструкторы</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3 wow fadeInRight" data-wow-delay=".2s">
