@@ -25,8 +25,8 @@ jobs:
         run: |
           ssh -p 2622 -i private_key -o StrictHostKeyChecking=no aquastyle@83.142.160.165 '
             # Создаем новую директорию для развертывания
-            mkdir -p ~/dev.aquastyle74.ru/www_new
-            cd ~/dev.aquastyle74.ru/www_new
+            mkdir -p ~/dev.aquastyle74.ru/aquastyle-dev_new
+            cd ~/dev.aquastyle74.ru/aquastyle-dev_new
 
             # Распаковываем архив и удаляем его
             unzip ~/dev.aquastyle74.ru/dev_archive.zip
@@ -40,14 +40,14 @@ jobs:
             echo "APP_KEY=${{ secrets.APP_KEY }}" >> .env
 
             # Останавливаем контейнер и удаляем папку со старой версией
-            cd ~/dev.aquastyle74.ru/www
+            cd ~/dev.aquastyle74.ru/aquastyle-dev
             docker-compose down --remove-orphans
             mv storage ../storage
-            rm -rf ~/dev.aquastyle74.ru/www
+            rm -rf ~/dev.aquastyle74.ru/aquastyle-dev
 
             # Переименовываем папку с новой версией и поднимаем контейнер
-            mv ~/dev.aquastyle74.ru/www_new ~/dev.aquastyle74.ru/www
-            cd ~/dev.aquastyle74.ru/www
+            mv ~/dev.aquastyle74.ru/aquastyle-dev_new ~/dev.aquastyle74.ru/aquastyle-dev
+            cd ~/dev.aquastyle74.ru/aquastyle-dev
             mv ../storage storage
             mv -f docker-compose.dev.yml docker-compose.yml
             mv -f .docker/nginx/nginx.dev.conf .docker/nginx/nginx.conf
