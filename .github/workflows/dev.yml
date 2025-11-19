@@ -1,9 +1,9 @@
-name: Деплой на прод сервер
+name: Деплой на дев сервер
 
 on:
   push:
     branches:
-      - main  # Запускать при пуше в ветку main
+      - dev  # Запускать при пуше в ветку dev
 
 jobs:
   deploy:
@@ -12,54 +12,54 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Архивация репозитория
-        run: "zip -r prod_archive.zip ./ -x *.git* -x /storage/*"
+        run: "zip -r dev_archive.zip ./ -x *.git* -x /storage/*"
       - name: Создание SSH ключа
         run: |
           echo "${{ secrets.SSH_DEPLOY_KEY }}" > private_key
           chmod 600 private_key
       - name: Копирование проекта на сервер
         run: |
-          scp -P 2622 -i private_key -o StrictHostKeyChecking=no prod_archive.zip \
-          aquastyle@83.142.160.165:~/aquastyle74.ru/
+          scp -P 2622 -i private_key -o StrictHostKeyChecking=no dev_archive.zip \
+          aquastyle@83.142.160.165:~/dev.aquastyle74.ru/
       - name: Распаковка проекта
         run: |
           ssh -p 2622 -i private_key -o StrictHostKeyChecking=no aquastyle@83.142.160.165 '
             # Создаем новую директорию для развертывания
-            mkdir -p ~/aquastyle74.ru/www_new
-            cd ~/aquastyle74.ru/www_new
+            mkdir -p ~/dev.aquastyle74.ru/www_new
+            cd ~/dev.aquastyle74.ru/www_new
 
             # Распаковываем архив и удаляем его
-            unzip ~/aquastyle74.ru/prod_archive.zip
-            rm ~/aquastyle74.ru/prod_archive.zip
+            unzip ~/dev.aquastyle74.ru/prod_archive.zip
+            rm ~/dev.aquastyle74.ru/prod_archive.zip
 
             # Настраиваем окружение
-            mv .env.prod .env
+            mv .env.dev .env
             echo "DB_DATABASE=${{ secrets.DB_DATABASE }}" >> .env
             echo "DB_USERNAME=${{ secrets.DB_USERNAME }}" >> .env
             echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
             echo "APP_KEY=${{ secrets.APP_KEY }}" >> .env
 
             # Останавливаем контейнер и удаляем папку со старой версией
-            cd ~/aquastyle74.ru/www
+            cd ~/dev.aquastyle74.ru/www
             docker-compose down --remove-orphans
             mv storage ../storage
-            rm -rf ~/aquastyle74.ru/www
+            rm -rf ~/dev.aquastyle74.ru/www
 
             # Переименовываем папку с новой версией и поднимаем контейнер
-            mv ~/aquastyle74.ru/www_new ~/aquastyle74.ru/www
-            cd ~/aquastyle74.ru/www
+            mv ~/dev.aquastyle74.ru/www_new ~/dev.aquastyle74.ru/www
+            cd ~/dev.aquastyle74.ru/www
             mv ../storage storage
-            mv -f docker-compose.prod.yml docker-compose.yml
-            mv -f .docker/nginx/nginx.prod.conf .docker/nginx/nginx.conf
+            mv -f docker-compose.dev.yml docker-compose.yml
+            mv -f .docker/nginx/nginx.dev.conf .docker/nginx/nginx.conf
             docker compose up --build -d
 
             # Устанавливаем зависимости и выполняем миграции
-            docker exec -i aquastyle-php-fpm-prod composer install
-            docker exec -i aquastyle-php-fpm-prod php artisan migrate --force
+            docker exec -i aquastyle-php-fpm-dev composer install
+            docker exec -i aquastyle-php-fpm-dev php artisan migrate --force
 
             # Настраиваем хранилище и очищаем кеш
-            docker exec -i aquastyle-php-fpm-prod php artisan storage:link
-            docker exec -i aquastyle-php-fpm-prod php artisan config:cache
+            docker exec -i aquastyle-php-fpm-dev php artisan storage:link
+            docker exec -i aquastyle-php-fpm-dev php artisan config:cache
 
             # Билдим фронтенд
             docker compose run --rm nodejs

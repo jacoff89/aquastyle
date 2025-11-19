@@ -1,0 +1,53 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: aquastyle-nginx-dev
+    working_dir: /var/www/html
+    depends_on:
+      - php-fpm
+    volumes:
+      - .:/var/www/html
+      - ./.docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "${NGINX_PORT}:80"
+    restart: unless-stopped
+
+  php-fpm:
+    container_name: aquastyle-php-fpm-dev
+    build:
+      context: .docker/php-fpm
+      args:
+        UID: ${UID}
+        GID: ${GID}
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    container_name: aquastyle-db-dev
+    image: mysql:8.4
+    volumes:
+      - aquastyle-db-data-dev:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "${MYSQL_PORT}:3306"
+    restart: unless-stopped
+
+  nodejs:
+    image: node:25
+    container_name: aquastyle-nodejs-dev
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    command: sh -c "npm ci && npm run build && rm -rf node_modules && chown -R ${UID}:${GID} public/build"
+    profiles:
+      - dev
+
+volumes:
+  aquastyle-db-data-dev:
