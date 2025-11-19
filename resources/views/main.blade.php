@@ -408,39 +408,37 @@
                         <!-- Slick Carousel-->
                         <div class="slick-slider carousel-parent" id="carousel-parent" data-autoplay="true" data-swipe="true" data-items="1" data-child="#child-carousel" data-for="#child-carousel">
                             <div class="item">
-                                <p class="quote-minimal-text">Не так давно, мне моя девушка подарила сертификат на погружение. Реальность превзошла все мои ожидания Мне очень всё понравилось. Инструктор, очень грамотно и доходчиво всё объяснял) При погружении, первую минуту не понимаешь что происходит. Но потом вошёл в азарт Дайвинг определённо имеет место быть в моих интересах Получил очень много эмоций Спасибо аквастиль!!!</p>
+                                <p class="quote-minimal-text">Прошла обучение два года назад и сразу поехала с ребятами в Египет. Огромная благодарность всей команде . Постоянные интересные выезды по уралу и заграницу. Как одна  огромная семья.
+                                    Рекомендую всем кто хочет просто попробовать и так же кто хочет заниматься профисионально. </p>
                             </div>
                             <div class="item">
-                                <p class="quote-minimal-text">Огромное спасибо ребятам с "Аквастиля". Подводный мир удивителен. Счастливая я! Море эмоций!</p>
+                                <p class="quote-minimal-text">Вчера моя дочь была на первом пробном занятии и первом погружении. Прошло все идеально, лучше, чем вообще думали. Очень понравилось. Дочь давно интересовалась дайвингом и наконец ее мечта осуществилась.
+                                    Все инструкторы внимательные, спокойные, провели полный инструктаж, все обьяснили, показали, контролировали при погружении. В итоге, на первом занятии дочка смогла сама проплыть туда и обратно, опускаясь  на самое дно бассейна.
+                                    Всей команде спасибо и процветания вашему делу!!! </p>
                             </div>
                             <div class="item">
-                                <p class="quote-minimal-text">Обучение дайвингу... С чем бы сравнить? Вот нет аналогий в жизни обычного человека!!! Какой-то абсолютно новый спектр эмоций! Восторг, как будто научили летать.
-                                    Сначала мне казалось, что я необучаема. При первом погружении было очень страшно даже просто опустить лицо в воду. Но всего через 4 занятия я уже обладаю минимальным набором умений начинающего дайвера.
-                                    Потому что инструкторы - талантливые, внимательные, чуткие и терпеливые.
-                                    Конечно, понимаю, что в дайвинге нет предела совершенству. Буду тренироваться и ждать возможности погружений на открытой воде. Отказаться от дайвинга, скорее всего, уже не смогу!!!
-                                    Моя жизнь стала на один мир больше. Совершенно изумительный! Подводный.
-                                    АКВАСТИЛЬ, СПАСИИИИИИИИИБО!
-                                    P.S.: безумно приятный бонус: хорошая компания с ШИКАРНЫМ чувством юмора)))..</p>
+                                <p class="quote-minimal-text">Мне 12 лет .Вчера было пробное погружение .Очень понравилось .Выдали все оборудование :гидрокостюм,маску ,ласты и т.д.Все подошло по размеру .Было удобно.Сначало провели инструктаж как,что .Меня полностью
+                                    контролировали при погружении.Я безумно рада.У меня все получилось.Теперь буду ходить на секцию!!!!</p>
                             </div>
                         </div>
                         <div class="slick-quote-nav">
                             <div class="slick-slider child-carousel" id="child-carousel" data-arrows="true" data-for="#carousel-parent" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="3" data-xl-items="3" data-xxl-items="3">
                                 <div class="item">
-                                    <div class="quote-minimal-figure"><img src="images/user-7-87x87.jpg" alt="" width="87" height="87"/>
+                                    <div class="quote-minimal-figure"><img src="images/review-1-87x87.jpg" alt="" width="87" height="87"/>
                                     </div>
-                                    <div class="quote-minimal-author">Александр Шиляев</div>
+                                    <div class="quote-minimal-author">Леля Счастливая</div>
                                     {{--<div class="quote-minimal-status">Клиент</div>--}}
                                 </div>
                                 <div class="item">
-                                    <div class="quote-minimal-figure"><img src="images/user-8-87x87.jpg" alt="" width="87" height="87"/>
+                                    <div class="quote-minimal-figure"><img src="images/review-3-87x87.jpg" alt="" width="87" height="87"/>
                                     </div>
-                                    <div class="quote-minimal-author">Екатерина</div>
+                                    <div class="quote-minimal-author">Gornoe318</div>
                                     {{--<div class="quote-minimal-status">Клиент</div>--}}
                                 </div>
                                 <div class="item">
-                                    <div class="quote-minimal-figure"><img src="images/user-9-87x87.jpg" alt="" width="87" height="87"/>
+                                    <div class="quote-minimal-figure"><img src="images/review-2-87x87.jpg" alt="" width="87" height="87"/>
                                     </div>
-                                    <div class="quote-minimal-author">Оксана Ким</div>
+                                    <div class="quote-minimal-author">Соня Тарасова</div>
                                     {{--<div class="quote-minimal-status">Клиент</div>--}}
                                 </div>
                             </div>
