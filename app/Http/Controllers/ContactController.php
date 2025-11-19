@@ -12,7 +12,7 @@ class ContactController extends Controller
     {
         $data = $request->validated();
 
-        Mail::to('jacoff8920@mail.ru')->send(new ContactMail($data));
+        Mail::to('amusnickaa@gmail.com')->send(new ContactMail($data));
 
         return response()->json('MF000');
     }
