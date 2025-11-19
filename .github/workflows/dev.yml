@@ -29,8 +29,8 @@ jobs:
             cd ~/dev.aquastyle74.ru/www_new
 
             # Распаковываем архив и удаляем его
-            unzip ~/dev.aquastyle74.ru/prod_archive.zip
-            rm ~/dev.aquastyle74.ru/prod_archive.zip
+            unzip ~/dev.aquastyle74.ru/dev_archive.zip
+            rm ~/dev.aquastyle74.ru/dev_archive.zip
 
             # Настраиваем окружение
             mv .env.dev .env
