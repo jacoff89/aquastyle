@@ -808,7 +808,7 @@
                             <li>
                                 <div class="unit unit-spacing-sm flex-column flex-md-row">
                                     <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                                    <div class="unit-body"><a href="tel:#">+7 (351) 235-35-24</a></div>
+                                    <div class="unit-body"><a href="tel:+73512353524">+7 (351) 235-35-24</a></div>
                                 </div>
                             </li>
                             <li>
