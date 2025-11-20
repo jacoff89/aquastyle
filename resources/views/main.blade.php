@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CLato%7CComfortaa:300,400,700%7COpen+Sans:300,400,600,700">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
+    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+        @vite(['resources/scss/app.scss'])
+    @endif
 </head>
 <body>
 <div class="preloader">
@@ -54,7 +54,7 @@
                             <!-- RD Navbar Toggle-->
                             <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                             <!-- RD Navbar Brand-->
-                            <div class="rd-navbar-brand"><a class="brand" href="/"><img class="brand-logo-dark" src="images/logo-default-120x45.png" alt="" width="120" height="45" srcset="images/logo-default-240x90.png 2x"/><img class="brand-logo-light icon-circle" src="images/custom_logo.jpg" alt="" width="119" height="43" srcset="images/custom_logo.jpg 2x"/></a>
+                            <div class="rd-navbar-brand"><a class="brand" href="/"><img class="brand-logo-dark" src="{{ Vite::asset('resources/images/logo-default-120x45.png') }}" alt="" width="120" height="45" srcset="{{ Vite::asset('resources/images/logo-default-240x90.png') }} 2x"/><img class="brand-logo-light icon-circle" src="{{ Vite::asset('resources/images/custom_logo.jpg') }}" alt="" width="119" height="43" srcset="{{ Vite::asset('resources/images/custom_logo.jpg') }} 2x"/></a>
                             </div>
                         </div>
                         <div class="rd-navbar-aside-element">
@@ -107,7 +107,7 @@
     <!-- Swiper-->
     <section class="section swiper-container swiper-slider swiper-slider-4" data-loop="true" data-autoplay="6000" data-simulate-touch="false">
         <div class="swiper-wrapper context-dark">
-            <div class="swiper-slide swiper-slide-1" data-slide-bg="images/slide-2.jpg">
+            <div class="swiper-slide swiper-slide-1" data-slide-bg="{{ Vite::asset('resources/images/slide-2.jpg') }}">
                 <div class="swiper-slide-caption section-md text-sm-start">
                     <div class="container">
                         <div class="row">
@@ -120,7 +120,7 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide swiper-slide-1" data-slide-bg="images/slide-1.jpg">
+            <div class="swiper-slide swiper-slide-1" data-slide-bg="{{ Vite::asset('resources/images/slide-1.jpg') }}">
                 <div class="swiper-slide-caption section-md text-sm-start">
                     <div class="container">
                         <div class="row">
@@ -146,19 +146,19 @@
             <h3 class="wow fadeScale">Услуги</h3>
             <!-- Owl Carousel-->
             <div class="owl-carousel owl-style-8" data-items="1" data-sm-items="2" data-lg-items="3" data-margin="30" data-dots="true" data-mouse-drag="false">
-                <article class="box-info-modern wow slideInUp" data-wow-delay=".1s"><a class="box-info-modern-figure" href="#form"><img src="images/about-1-340x243.jpg" alt="" width="340" height="243"/></a>
+                <article class="box-info-modern wow slideInUp" data-wow-delay=".1s"><a class="box-info-modern-figure" href="#form"><img src="{{ Vite::asset('resources/images/about-1-340x243.jpg') }}" alt="" width="340" height="243"/></a>
                     <h4 class="box-info-modern-title"><a href="#">Базовый курс по дайвингу</a></h4>
                     <div class="box-info-modern-text">Обучение дайвингу (Дайвер 1 звезда). <br>Погружение до 18 метров.</div>
                     <h6 class="box-info-modern-title">от 30 000 рублей</h6>
                     <a class="box-info-modern-link" href="#form">Записаться</a>
                 </article>
-                <article class="box-info-modern wow slideInUp"><a class="box-info-modern-figure" href="#"><img src="images/about-2-340x243.jpg" alt="" width="340" height="243"/></a>
+                <article class="box-info-modern wow slideInUp"><a class="box-info-modern-figure" href="#"><img src="{{ Vite::asset('resources/images/about-2-340x243.jpg') }}" alt="" width="340" height="243"/></a>
                     <h4 class="box-info-modern-title"><a href="#form">Пробное погружение</a></h4>
                     <div class="box-info-modern-text">Inter dive - Пробное погружение Это самый первый и запоминающийся этап знакомства с подводным миром. Для знакомства с дайвингом не требуется специальная подготовка, опыт погружений и обращения со снаряжением. Инструктор все сделает за Вас!</div>
                     <h6 class="box-info-modern-title">от 6 000 рублей</h6>
                     <a class="box-info-modern-link" href="#form">Записаться</a>
                 </article>
-                <article class="box-info-modern wow slideInUp" data-wow-delay=".1s"><a class="box-info-modern-figure" href="#"><img src="images/about-3-340x243.jpg" alt="" width="340" height="243"/></a>
+                <article class="box-info-modern wow slideInUp" data-wow-delay=".1s"><a class="box-info-modern-figure" href="#"><img src="{{ Vite::asset('resources/images/about-3-340x243.jpg') }}" alt="" width="340" height="243"/></a>
                     <h4 class="box-info-modern-title"><a href="#form">Фридайвинг. <br>Базовый курс</a></h4>
                     <div class="box-info-modern-text">Базовый курс по основам ФРИДАЙВИНГА. Курс по подготовке фридайверов, даст Вам знания и навыки, необходимые для планирования и осуществления погружений на задержке дыхания</div>
                     <h6 class="box-info-modern-title">26 000 рублей</h6>
@@ -178,7 +178,7 @@
                             <article class="box-icon-classic box-icon-nancy-right text-center text-lg-right wow fadeInLeft">
                                 <div class="unit flex-column flex-lg-row-reverse">
                                     <div class="unit-left">
-                                        <div class="box-icon-classic-svg"><img src="images/index-icon-1-77x79.png" alt="" width="77" height="79"/>
+                                        <div class="box-icon-classic-svg"><img src="{{ Vite::asset('resources/images/index-icon-1-77x79.png') }}" alt="" width="77" height="79"/>
                                         </div>
                                     </div>
                                     <div class="unit-body">
@@ -192,7 +192,7 @@
                             <article class="box-icon-classic box-icon-nancy-right text-center text-lg-right wow fadeInLeft" data-wow-delay=".1s">
                                 <div class="unit flex-column flex-lg-row-reverse">
                                     <div class="unit-left">
-                                        <div class="box-icon-classic-svg"><img src="images/index-icon-2-77x79.png" alt="" width="77" height="79"/>
+                                        <div class="box-icon-classic-svg"><img src="{{ Vite::asset('resources/images/index-icon-2-77x79.png') }}" alt="" width="77" height="79"/>
                                         </div>
                                     </div>
                                     <div class="unit-body">
@@ -211,7 +211,7 @@
                             <article class="box-icon-classic box-icon-nancy-left text-center text-lg-left wow fadeInRigth">
                                 <div class="unit flex-column flex-lg-row">
                                     <div class="unit-left">
-                                        <div class="box-icon-classic-svg"><img src="images/index-icon-3-77x79.png" alt="" width="77" height="79"/>
+                                        <div class="box-icon-classic-svg"><img src="{{ Vite::asset('resources/images/index-icon-3-77x79.png') }}" alt="" width="77" height="79"/>
                                         </div>
                                     </div>
                                     <div class="unit-body">
@@ -225,7 +225,7 @@
                             <article class="box-icon-classic box-icon-nancy-left text-center text-lg-left wow fadeInRight" data-wow-delay=".1s">
                                 <div class="unit flex-column flex-lg-row">
                                     <div class="unit-left">
-                                        <div class="box-icon-classic-svg"><img src="images/index-icon-4-77x79.png" alt="" width="77" height="79"/>
+                                        <div class="box-icon-classic-svg"><img src="{{ Vite::asset('resources/images/index-icon-4-77x79.png') }}" alt="" width="77" height="79"/>
                                         </div>
                                     </div>
                                     <div class="unit-body">
@@ -242,7 +242,7 @@
     </section>
 
     <!-- Counter Modern-->
-    <section class="parallax-container" data-parallax-img="images/parallax-1.jpg">
+    <section class="parallax-container" data-parallax-img="{{ Vite::asset('resources/images/parallax-1.jpg') }}">
         <div class="parallax-content section-xxl context-dark">
             <div class="container">
                 <div class="row row-30 justify-content-center">
@@ -292,15 +292,15 @@
                         <!-- Owl Carousel-->
                         <div class="owl-carousel owl-style-5" data-items="1" data-margin="20" data-dots="true" data-autoplay="false" data-animation-out="fadeOut">
                             <article class="product-creative">
-                                <div class="product-figure"><img src="images/product-big-1-543x558.png" alt="" width="543" height="558"/>
+                                <div class="product-figure"><img src="{{ Vite::asset('resources/images/product-big-1-543x558.png') }}" alt="" width="543" height="558"/>
                                 </div>
                             </article>
                             <article class="product-creative">
-                                <div class="product-figure"><img src="images/product-big-2-543x558.png" alt="" width="543" height="558"/>
+                                <div class="product-figure"><img src="{{ Vite::asset('resources/images/product-big-2-543x558.png') }}" alt="" width="543" height="558"/>
                                 </div>
                             </article>
                             <article class="product-creative">
-                                <div class="product-figure"><img src="images/product-big-3-543x558.png" alt="" width="543" height="558"/>
+                                <div class="product-figure"><img src="{{ Vite::asset('resources/images/product-big-3-543x558.png') }}" alt="" width="543" height="558"/>
                                 </div>
                             </article>
                         </div>
@@ -359,7 +359,7 @@
                         <div class="col-sm-6 col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
                             <article class="box-icon-creative-2">
                                 <div class="unit flex-column flex-md-row flex-lg-column flex-xl-row align-items-md-center align-items-lg-start align-items-xl-center">
-                                    <div class="unit-left"><img src="images/index-icon-1-52x54.png" alt="" width="52" height="54"/>
+                                    <div class="unit-left"><img src="{{ Vite::asset('resources/images/index-icon-1-52x54.png') }}" alt="" width="52" height="54"/>
                                     </div>
                                     <div class="unit-body">
                                         <h5 class="box-icon-creative-title-2"><a href="#">Разные локации</a></h5>
@@ -371,7 +371,7 @@
                         <div class="col-sm-6 col-lg-4 wow fadeInLeft" data-wow-delay=".1s">
                             <article class="box-icon-creative-2">
                                 <div class="unit flex-column flex-md-row flex-lg-column flex-xl-row align-items-md-center align-items-lg-start align-items-xl-center">
-                                    <div class="unit-left"><img src="images/index-icon-2-52x55.png" alt="" width="52" height="55"/>
+                                    <div class="unit-left"><img src="{{ Vite::asset('resources/images/index-icon-2-52x55.png') }}" alt="" width="52" height="55"/>
                                     </div>
                                     <div class="unit-body">
                                         <h5 class="box-icon-creative-title-2"><a href="#">Бесплатный трансфер</a></h5>
@@ -383,7 +383,7 @@
                         <div class="col-sm-6 col-lg-4 wow fadeInLeft">
                             <article class="box-icon-creative-2">
                                 <div class="unit flex-column flex-md-row flex-lg-column flex-xl-row align-items-md-center align-items-lg-start align-items-xl-center">
-                                    <div class="unit-left"><img src="images/index-icon-3-54x54.png" alt="" width="54" height="54"/>
+                                    <div class="unit-left"><img src="{{ Vite::asset('resources/images/index-icon-3-54x54.png') }}" alt="" width="54" height="54"/>
                                     </div>
                                     <div class="unit-body">
                                         <h5 class="box-icon-creative-title-2"><a href="#">Онлайн-оплата</a></h5>
@@ -424,19 +424,19 @@
                         <div class="slick-quote-nav">
                             <div class="slick-slider child-carousel" id="child-carousel" data-arrows="true" data-for="#carousel-parent" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="3" data-xl-items="3" data-xxl-items="3">
                                 <div class="item">
-                                    <div class="quote-minimal-figure"><img src="images/review-1-87x87.jpg" alt="" width="87" height="87"/>
+                                    <div class="quote-minimal-figure"><img src="{{ Vite::asset('resources/images/review-1-87x87.jpg') }}" alt="" width="87" height="87"/>
                                     </div>
                                     <div class="quote-minimal-author">Леля Счастливая</div>
                                     {{--<div class="quote-minimal-status">Клиент</div>--}}
                                 </div>
                                 <div class="item">
-                                    <div class="quote-minimal-figure"><img src="images/review-3-87x87.jpg" alt="" width="87" height="87"/>
+                                    <div class="quote-minimal-figure"><img src="{{ Vite::asset('resources/images/review-3-87x87.jpg') }}" alt="" width="87" height="87"/>
                                     </div>
                                     <div class="quote-minimal-author">Gornoe318</div>
                                     {{--<div class="quote-minimal-status">Клиент</div>--}}
                                 </div>
                                 <div class="item">
-                                    <div class="quote-minimal-figure"><img src="images/review-2-87x87.jpg" alt="" width="87" height="87"/>
+                                    <div class="quote-minimal-figure"><img src="{{ Vite::asset('resources/images/review-2-87x87.jpg') }}" alt="" width="87" height="87"/>
                                     </div>
                                     <div class="quote-minimal-author">Соня Тарасова</div>
                                     {{--<div class="quote-minimal-status">Клиент</div>--}}
@@ -459,13 +459,13 @@
                     <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                         <!-- Thumbnail Classic-->
                         <article class="thumbnail-classic">
-                            <div class="thumbnail-classic-figure"><img src="images/masonry-gallery-1-270x250.jpg" alt="" width="270" height="250"/>
+                            <div class="thumbnail-classic-figure"><img src="{{ Vite::asset('resources/images/masonry-gallery-1-270x250.jpg') }}" alt="" width="270" height="250"/>
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
                                     <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
-                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/grid-gallery-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-1-270x250.jpg" alt="" width="270" height="250"/></a></div>
+                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="{{ Vite::asset('resources/images/grid-gallery-2-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/masonry-gallery-1-270x250.jpg') }}" alt="" width="270" height="250"/></a></div>
                                     </div>
                                 </div>
                             </div>
@@ -474,13 +474,13 @@
                     <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                         <!-- Thumbnail Classic-->
                         <article class="thumbnail-classic">
-                            <div class="thumbnail-classic-figure"><img src="images/masonry-gallery-2-270x530.jpg" alt="" width="270" height="530"/>
+                            <div class="thumbnail-classic-figure"><img src="{{ Vite::asset('resources/images/masonry-gallery-2-270x530.jpg') }}" alt="" width="270" height="530"/>
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
                                     <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
-                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/masonry-gallery-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-2-270x530.jpg" alt="" width="270" height="530"/></a></div>
+                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="{{ Vite::asset('resources/images/masonry-gallery-2-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/masonry-gallery-2-270x530.jpg') }}" alt="" width="270" height="530"/></a></div>
                                     </div>
                                 </div>
                             </div>
@@ -489,13 +489,13 @@
                     <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                         <!-- Thumbnail Classic-->
                         <article class="thumbnail-classic">
-                            <div class="thumbnail-classic-figure"><img src="images/masonry-gallery-3-270x250.jpg" alt="" width="270" height="250"/>
+                            <div class="thumbnail-classic-figure"><img src="{{ Vite::asset('resources/images/masonry-gallery-3-270x250.jpg') }}" alt="" width="270" height="250"/>
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
                                     <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
-                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/masonry-gallery-3-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-3-270x250.jpg" alt="" width="270" height="250"/></a></div>
+                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="{{ Vite::asset('resources/images/masonry-gallery-3-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/masonry-gallery-3-270x250.jpg') }}" alt="" width="270" height="250"/></a></div>
                                     </div>
                                 </div>
                             </div>
@@ -504,13 +504,13 @@
                     <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                         <!-- Thumbnail Classic-->
                         <article class="thumbnail-classic">
-                            <div class="thumbnail-classic-figure"><img src="images/masonry-gallery-4-270x250.jpg" alt="" width="270" height="250"/>
+                            <div class="thumbnail-classic-figure"><img src="{{ Vite::asset('resources/images/masonry-gallery-4-270x250.jpg') }}" alt="" width="270" height="250"/>
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
                                     <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
-                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/masonry-gallery-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-4-270x250.jpg" alt="" width="270" height="250"/></a></div>
+                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="{{ Vite::asset('resources/images/masonry-gallery-4-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/masonry-gallery-4-270x250.jpg') }}" alt="" width="270" height="250"/></a></div>
                                     </div>
                                 </div>
                             </div>
@@ -519,13 +519,13 @@
                     <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                         <!-- Thumbnail Classic-->
                         <article class="thumbnail-classic">
-                            <div class="thumbnail-classic-figure"><img src="images/masonry-gallery-5-270x250.jpg" alt="" width="270" height="250"/>
+                            <div class="thumbnail-classic-figure"><img src="{{ Vite::asset('resources/images/masonry-gallery-5-270x250.jpg') }}" alt="" width="270" height="250"/>
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
                                     <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
-                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/grid-gallery-3-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-5-270x250.jpg" alt="" width="270" height="250"/></a></div>
+                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="{{ Vite::asset('resources/images/grid-gallery-3-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/masonry-gallery-5-270x250.jpg') }}" alt="" width="270" height="250"/></a></div>
                                     </div>
                                 </div>
                             </div>
@@ -534,13 +534,13 @@
                     <div class="col-sm-6 col-lg-4 col-xl-6 isotope-item">
                         <!-- Thumbnail Classic-->
                         <article class="thumbnail-classic">
-                            <div class="thumbnail-classic-figure"><img src="images/masonry-gallery-6-570x530.jpg" alt="" width="570" height="530"/>
+                            <div class="thumbnail-classic-figure"><img src="{{ Vite::asset('resources/images/masonry-gallery-6-570x530.jpg') }}" alt="" width="570" height="530"/>
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
                                     <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
-                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/grid-fullwidth-gallery-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-6-570x530.jpg" alt="" width="570" height="530"/></a></div>
+                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="{{ Vite::asset('resources/images/grid-fullwidth-gallery-2-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/masonry-gallery-6-570x530.jpg') }}" alt="" width="570" height="530"/></a></div>
                                     </div>
                                 </div>
                             </div>
@@ -549,13 +549,13 @@
                     <div class="col-sm-6 col-lg-8 col-xl-6 isotope-item">
                         <!-- Thumbnail Classic-->
                         <article class="thumbnail-classic">
-                            <div class="thumbnail-classic-figure"><img src="images/masonry-gallery-7-570x250.jpg" alt="" width="570" height="250"/>
+                            <div class="thumbnail-classic-figure"><img src="{{ Vite::asset('resources/images/masonry-gallery-7-570x250.jpg') }}" alt="" width="570" height="250"/>
                             </div>
                             <div class="thumbnail-classic-caption">
                                 <div>
                                     <h5 class="thumbnail-classic-title"><a href="#"></a></h5>
                                     <div class="thumbnail-classic-button-wrap">
-                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="images/masonry-gallery-7-1200x800-original.jpg" data-lightgallery="item"><img src="images/masonry-gallery-7-570x250.jpg" alt="" width="570" height="250"/></a></div>
+                                        <div class="thumbnail-classic-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-search74" href="{{ Vite::asset('resources/images/masonry-gallery-7-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/masonry-gallery-7-570x250.jpg') }}" alt="" width="570" height="250"/></a></div>
                                     </div>
                                 </div>
                             </div>
@@ -567,7 +567,7 @@
     </section>
 
     <!-- Подписаться to Our Newsletter-->
-    <section id="form" class="parallax-container" data-parallax-img="images/parallax-4.jpg">
+    <section id="form" class="parallax-container" data-parallax-img="{{ Vite::asset('resources/images/parallax-4.jpg') }}">
         <div class="parallax-content section-xxl context-dark text-md-left">
             <div class="container">
                 <h3 class="text-spacing-0 mb-lg-5">Оставьте заявку и мы вам позвоним</h3>
@@ -613,7 +613,7 @@
             <h3 class="text-spacing-0 text-transform-capitalize wow fadeScale">Наша команда</h3>
             <!-- Owl Carousel-->
             <div class="owl-carousel owl-style-9" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-margin="30" data-dots="true" data-mouse-drag="false">
-                <article class="team-modern box-sm wow slideInUp"><img src="images/team-4-270x227.jpg" alt="" width="270" height="227"/>
+                <article class="team-modern box-sm wow slideInUp"><img src="{{ Vite::asset('resources/images/team-4-270x227.jpg') }}" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Красильников Евгений</a></h5>
                     <p class="team-modern-text">Руководитель, инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -623,7 +623,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".1s"><img src="images/team-5-270x227.jpg" alt="" width="270" height="227"/>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".1s"><img src="{{ Vite::asset('resources/images/team-5-270x227.jpg') }}" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Алмазов Константин</a></h5>
                     <p class="team-modern-text">Руководитель направления фридайвинга</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -633,7 +633,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".2s"><img src="images/team-6-270x227.jpg" alt="" width="270" height="227"/>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".2s"><img src="{{ Vite::asset('resources/images/team-6-270x227.jpg') }}" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Листишенков Алексей</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -643,7 +643,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="images/team-7-270x227.jpg" alt="" width="270" height="227"/>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="{{ Vite::asset('resources/images/team-7-270x227.jpg') }}" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Безрученко Яков</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -653,7 +653,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="images/team-8-270x227.jpg" alt="" width="270" height="227"/>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="{{ Vite::asset('resources/images/team-8-270x227.jpg') }}" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Жилина Светлана</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу, инструктор детской секции</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -663,7 +663,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="images/team-2-270x227.jpg" alt="" width="270" height="227"/>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="{{ Vite::asset('resources/images/team-2-270x227.jpg') }}" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Глухов Александр</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -673,7 +673,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="images/team-3-270x227.jpg" alt="" width="270" height="227"/>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="{{ Vite::asset('resources/images/team-3-270x227.jpg') }}" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Тимофеев Евгений</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -683,7 +683,7 @@
                         <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                     </ul>--}}
                 </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="images/team-1-270x227.jpg" alt="" width="270" height="227"/>
+                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="{{ Vite::asset('resources/images/team-1-270x227.jpg') }}" alt="" width="270" height="227"/>
                     <h5 class="team-modern-name"><a href="#">Стремоухов Максим</a></h5>
                     <p class="team-modern-text">Инструктор по дайвингу</p>
                     {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
@@ -704,7 +704,7 @@
             <!-- Owl Carousel-->
             <div class="owl-carousel" data-items="1" data-sm-items="2" data-lg-items="3" data-margin="30" data-dots="true" data-mouse-drag="false">
                 <!-- Post Classic-->
-                <article class="post post-classic box-md wow slideInDown"><a class="post-classic-figure" href="blog-post.html"><img src="images/post-1-370x239.jpg" alt="" width="370" height="239"/></a>
+                <article class="post post-classic box-md wow slideInDown"><a class="post-classic-figure" href="blog-post.html"><img src="{{ Vite::asset('resources/images/post-1-370x239.jpg') }}" alt="" width="370" height="239"/></a>
                     <div class="post-classic-content">
                         <div class="post-classic-time">
                             <time datetime="2021-08-09">August 9, 2021</time>
@@ -714,7 +714,7 @@
                     </div>
                 </article>
                 <!-- Post Classic-->
-                <article class="post post-classic box-md wow slideInUp"><a class="post-classic-figure" href="blog-post.html"><img src="images/post-2-370x239.jpg" alt="" width="370" height="239"/></a>
+                <article class="post post-classic box-md wow slideInUp"><a class="post-classic-figure" href="blog-post.html"><img src="{{ Vite::asset('resources/images/post-2-370x239.jpg') }}" alt="" width="370" height="239"/></a>
                     <div class="post-classic-content">
                         <div class="post-classic-time">
                             <time datetime="2021-08-09">August 9, 2021</time>
@@ -724,7 +724,7 @@
                     </div>
                 </article>
                 <!-- Post Classic-->
-                <article class="post post-classic box-md wow slideInDown"><a class="post-classic-figure" href="blog-post.html"><img src="images/post-3-370x239.jpg" alt="" width="370" height="239"/></a>
+                <article class="post post-classic box-md wow slideInDown"><a class="post-classic-figure" href="blog-post.html"><img src="{{ Vite::asset('resources/images/post-3-370x239.jpg') }}" alt="" width="370" height="239"/></a>
                     <div class="post-classic-content">
                         <div class="post-classic-time">
                             <time datetime="2021-08-09">August 9, 2021</time>
@@ -733,7 +733,7 @@
                         <p class="post-classic-text font-fourth">The Hawaiian Archipelago is full of bucket list dives with exciting adventures such as diving in the crater...</p>
                     </div>
                 </article>
-                <article class="post post-classic box-md wow slideInDown"><a class="post-classic-figure" href="blog-post.html"><img src="images/post-3-370x239.jpg" alt="" width="370" height="239"/></a>
+                <article class="post post-classic box-md wow slideInDown"><a class="post-classic-figure" href="blog-post.html"><img src="{{ Vite::asset('resources/images/post-3-370x239.jpg') }}" alt="" width="370" height="239"/></a>
                     <div class="post-classic-content">
                         <div class="post-classic-time">
                             <time datetime="2021-08-09">August 9, 2021</time>
@@ -756,22 +756,22 @@
                             <h5 class="footer-modern-title">Галерея</h5>
                             <div class="row row-10 gutters-10" data-lightgallery="group">
                                 <div class="col-4 col-sm-2 col-lg-4">
-                                    <!-- Thumbnail Minimal--><a class="thumbnail-minimal" href="images/grid-fullwidth-gallery-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/grid-gallery-1-93x93.jpg" alt="" width="93" height="93"/></a>
+                                    <!-- Thumbnail Minimal--><a class="thumbnail-minimal" href="{{ Vite::asset('resources/images/grid-fullwidth-gallery-2-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/grid-gallery-1-93x93.jpg') }}" alt="" width="93" height="93"/></a>
                                 </div>
                                 <div class="col-4 col-sm-2 col-lg-4">
-                                    <!-- Thumbnail Minimal--><a class="thumbnail-minimal" href="images/masonry-gallery-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/grid-gallery-2-93x93.jpg" alt="" width="93" height="93"/></a>
+                                    <!-- Thumbnail Minimal--><a class="thumbnail-minimal" href="{{ Vite::asset('resources/images/masonry-gallery-4-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/grid-gallery-2-93x93.jpg') }}" alt="" width="93" height="93"/></a>
                                 </div>
                                 <div class="col-4 col-sm-2 col-lg-4">
-                                    <!-- Thumbnail Minimal--><a class="thumbnail-minimal" href="images/grid-gallery-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/grid-gallery-3-93x93.jpg" alt="" width="93" height="93"/></a>
+                                    <!-- Thumbnail Minimal--><a class="thumbnail-minimal" href="{{ Vite::asset('resources/images/grid-gallery-4-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/grid-gallery-3-93x93.jpg') }}" alt="" width="93" height="93"/></a>
                                 </div>
                                 <div class="col-4 col-sm-2 col-lg-4">
-                                    <!-- Thumbnail Minimal--><a class="thumbnail-minimal" href="images/masonry-gallery-7-1200x800-original.jpg" data-lightgallery="item"><img src="images/grid-gallery-4-93x93.jpg" alt="" width="93" height="93"/></a>
+                                    <!-- Thumbnail Minimal--><a class="thumbnail-minimal" href="{{ Vite::asset('resources/images/masonry-gallery-7-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/grid-gallery-4-93x93.jpg') }}" alt="" width="93" height="93"/></a>
                                 </div>
                                 <div class="col-4 col-sm-2 col-lg-4">
-                                    <!-- Thumbnail Minimal--><a class="thumbnail-minimal" href="images/grid-gallery-5-1200x800-original.jpg" data-lightgallery="item"><img src="images/grid-gallery-5-93x93.jpg" alt="" width="93" height="93"/></a>
+                                    <!-- Thumbnail Minimal--><a class="thumbnail-minimal" href="{{ Vite::asset('resources/images/grid-gallery-5-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/grid-gallery-5-93x93.jpg') }}" alt="" width="93" height="93"/></a>
                                 </div>
                                 <div class="col-4 col-sm-2 col-lg-4">
-                                    <!-- Thumbnail Minimal--><a class="thumbnail-minimal" href="images/grid-gallery-6-1200x800-original.jpg" data-lightgallery="item"><img src="images/grid-gallery-6-93x93.jpg" alt="" width="93" height="93"/></a>
+                                    <!-- Thumbnail Minimal--><a class="thumbnail-minimal" href="{{ Vite::asset('resources/images/grid-gallery-6-1200x800-original.jpg') }}" data-lightgallery="item"><img src="{{ Vite::asset('resources/images/grid-gallery-6-93x93.jpg') }}" alt="" width="93" height="93"/></a>
                                 </div>
                             </div>
                         </div>
@@ -834,7 +834,9 @@
     </footer>
 </div>
 <div class="snackbars" id="form-output-global"></div>
-<script src="js/core.min.js"></script>
-<script src="js/script.js"></script>
+<script src="{{ Vite::asset('resources/js/core.min.js') }}"></script>
+@if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+    @vite(['resources/js/app.js'])
+@endif
 <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P9FT69');</script><!-- End Google Tag Manager --></body>
 </html>
