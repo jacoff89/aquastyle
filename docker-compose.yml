@@ -37,7 +37,7 @@ services:
       - "${MYSQL_PORT}:3306"
 
   nodejs:
-    image: node:24
+    image: node:25
     container_name: aquastyle-nodejs
     working_dir: /var/www/html
     user: "${UID}:${GID}"
