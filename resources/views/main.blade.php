@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 <head>
-    <title>Главная</title>
+    <title>Дайвинг клуб &quot;Аквастиль&quot; -  обучиться дайвингу и фридайвингу, подводной охоте в Челябинске</title>
+    <meta name="description" content="Где обучиться дайвингу и фридайвингу, подводной охоте в Челябинске на Урале и повышать свое мастерство? Конечно же в ДАЙВИНГ-КЛУБЕ &quot;АКВАСТИЛЬ&quot;.">
+    <meta name="keywords" content="Дайвинг клуб, обучиться дайвингу, фридайвинг">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
