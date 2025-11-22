@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Архивация репозитория
-        run: "zip -r dev_archive.zip ./ -x *.git* -x /storage/* -x *.docker* -x *docker*"
+        run: "zip -r dev_archive.zip ./ -x *.git* -x *.env* -x /storage/* -x *.docker* -x *docker*"
       - name: Создание SSH ключа
         run: |
           echo "${{ secrets.SSH_DEPLOY_KEY }}" > private_key
@@ -50,11 +50,7 @@ jobs:
             rm ~/aquastyle-dev/dev_archive.zip
 
             # Настраиваем окружение
-            mv .env.dev .env
-            echo "DB_DATABASE=${{ secrets.DB_DATABASE }}" >> .env
-            echo "DB_USERNAME=${{ secrets.DB_USERNAME }}" >> .env
-            echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
-            echo "APP_KEY=${{ secrets.APP_KEY }}" >> .env
+            cp ../.env .
 
             # Поднимаем новый PHP контейнер
             cd ~/aquastyle-dev
