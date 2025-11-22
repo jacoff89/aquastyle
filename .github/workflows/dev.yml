@@ -58,7 +58,7 @@ jobs:
 
             # Устанавливаем зависимости и выполняем миграции
             docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} ln -s /var/www/html/storage /var/www/html/app-${{ steps.vars.outputs.NEW }}/storage
-            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} composer install
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} composer install --no-dev --optimize-autoloader
             docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan migrate --force
 
             # Настраиваем хранилище
@@ -67,9 +67,10 @@ jobs:
             # Билдим фронтенд
             docker compose run --rm nodejs-${{ steps.vars.outputs.NEW }}
 
-            # Переключаем на новую версию и чистим кеш
+            # Переключаем на новую версию и обновляем кеш
             bash toggle-nginx.sh switch
-            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan config:cache
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan optimize:clear
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan optimize
             sleep 5
 
             # Останавливаем контейнер и удаляем папку со старой версией
