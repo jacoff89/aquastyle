@@ -12,25 +12,42 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Архивация репозитория
-        run: "zip -r dev_archive.zip ./ -x *.git* -x /storage/*"
+        run: "zip -r dev_archive.zip ./ -x *.git* -x /storage/* -x *.docker* -x *docker*"
       - name: Создание SSH ключа
         run: |
           echo "${{ secrets.SSH_DEPLOY_KEY }}" > private_key
           chmod 600 private_key
+      - name: Запускаем скрипт получения активной версии
+        id: active
+        run: |
+          ACTIVE=$(ssh -p 2622 -i private_key -o StrictHostKeyChecking=no aquastyle@83.142.160.165 "\
+            bash ~/aquastyle-dev/toggle-nginx.sh \
+          ")
+          echo "active=$ACTIVE" >> $GITHUB_OUTPUT
+      - name: Определяем новую версию
+        id: vars
+        run: |
+          if [ "${{ steps.active.outputs.active }}" = "blue" ]; then
+            echo "ACTIVE=blue" >> $GITHUB_OUTPUT
+            echo "NEW=green" >> $GITHUB_OUTPUT
+          else
+            echo "ACTIVE=green" >> $GITHUB_OUTPUT
+            echo "NEW=blue" >> $GITHUB_OUTPUT
+          fi
       - name: Копирование проекта на сервер
         run: |
           scp -P 2622 -i private_key -o StrictHostKeyChecking=no dev_archive.zip \
-          aquastyle@83.142.160.165:~/dev.aquastyle74.ru/
+          aquastyle@83.142.160.165:~/aquastyle-dev/
       - name: Распаковка проекта
         run: |
           ssh -p 2622 -i private_key -o StrictHostKeyChecking=no aquastyle@83.142.160.165 '
             # Создаем новую директорию для развертывания
-            mkdir -p ~/dev.aquastyle74.ru/aquastyle-dev_new
-            cd ~/dev.aquastyle74.ru/aquastyle-dev_new
+            mkdir -p ~/aquastyle-dev/app-${{ steps.vars.outputs.NEW }}
+            cd ~/aquastyle-dev/app-${{ steps.vars.outputs.NEW }}
 
             # Распаковываем архив и удаляем его
-            unzip ~/dev.aquastyle74.ru/dev_archive.zip
-            rm ~/dev.aquastyle74.ru/dev_archive.zip
+            unzip ~/aquastyle-dev/dev_archive.zip
+            rm ~/aquastyle-dev/dev_archive.zip
 
             # Настраиваем окружение
             mv .env.dev .env
@@ -39,28 +56,28 @@ jobs:
             echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
             echo "APP_KEY=${{ secrets.APP_KEY }}" >> .env
 
-            # Останавливаем контейнер и удаляем папку со старой версией
-            cd ~/dev.aquastyle74.ru/aquastyle-dev
-            docker-compose down --remove-orphans
-            mv storage ../storage
-            rm -rf ~/dev.aquastyle74.ru/aquastyle-dev
-
-            # Переименовываем папку с новой версией и поднимаем контейнер
-            mv ~/dev.aquastyle74.ru/aquastyle-dev_new ~/dev.aquastyle74.ru/aquastyle-dev
-            cd ~/dev.aquastyle74.ru/aquastyle-dev
-            mv ../storage storage
-            mv -f docker-compose.dev.yml docker-compose.yml
-            mv -f .docker/nginx/nginx.dev.conf .docker/nginx/nginx.conf
-            docker compose up --build -d
+            # Поднимаем новый PHP контейнер
+            cd ~/aquastyle-dev
+            docker compose up --build -d php-fpm-${{ steps.vars.outputs.NEW }}
 
             # Устанавливаем зависимости и выполняем миграции
-            docker exec -i aquastyle-php-fpm-dev composer install
-            docker exec -i aquastyle-php-fpm-dev php artisan migrate --force
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} ln -s /var/www/html/storage /var/www/html/app-${{ steps.vars.outputs.NEW }}/storage
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} composer install
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan migrate --force
 
-            # Настраиваем хранилище и очищаем кеш
-            docker exec -i aquastyle-php-fpm-dev php artisan storage:link
-            docker exec -i aquastyle-php-fpm-dev php artisan config:cache
+            # Настраиваем хранилище
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan storage:link
 
             # Билдим фронтенд
-            docker compose run --rm nodejs
+            docker compose run --rm nodejs-${{ steps.vars.outputs.NEW }}
+
+            # Переключаем на новую версию и чистим кеш
+            bash toggle-nginx.sh switch
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan config:cache
+            sleep 5
+
+            # Останавливаем контейнер и удаляем папку со старой версией
+            docker compose stop php-fpm-${{ steps.vars.outputs.ACTIVE }}
+            docker compose rm -f php-fpm-${{ steps.vars.outputs.ACTIVE }}
+            rm -rf ~/aquastyle-dev/app-${{ steps.vars.outputs.ACTIVE }}
           '
