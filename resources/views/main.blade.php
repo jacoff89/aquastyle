@@ -616,86 +616,24 @@
             <h3 class="text-spacing-0 text-transform-capitalize wow fadeScale">Наша команда</h3>
             <!-- Owl Carousel-->
             <div class="owl-carousel owl-style-9" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-margin="30" data-dots="true" data-mouse-drag="false">
-                <article class="team-modern box-sm wow slideInUp"><img src="{{ Vite::asset('resources/images/team-4-270x227.jpg') }}" alt="" width="270" height="227"/>
-                    <h5 class="team-modern-name"><a href="#">Красильников Евгений</a></h5>
-                    <p class="team-modern-text">Руководитель, инструктор по дайвингу</p>
-                    {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
-                        <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                        <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                        <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                        <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
-                    </ul>--}}
-                </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".1s"><img src="{{ Vite::asset('resources/images/team-5-270x227.jpg') }}" alt="" width="270" height="227"/>
-                    <h5 class="team-modern-name"><a href="#">Алмазов Константин</a></h5>
-                    <p class="team-modern-text">Руководитель направления фридайвинга</p>
-                    {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
-                        <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                        <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                        <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                        <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
-                    </ul>--}}
-                </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".2s"><img src="{{ Vite::asset('resources/images/team-6-270x227.jpg') }}" alt="" width="270" height="227"/>
-                    <h5 class="team-modern-name"><a href="#">Листишенков Алексей</a></h5>
-                    <p class="team-modern-text">Инструктор по дайвингу</p>
-                    {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
-                        <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                        <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                        <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                        <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
-                    </ul>--}}
-                </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="{{ Vite::asset('resources/images/team-7-270x227.jpg') }}" alt="" width="270" height="227"/>
-                    <h5 class="team-modern-name"><a href="#">Безрученко Яков</a></h5>
-                    <p class="team-modern-text">Инструктор по дайвингу</p>
-                    {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
-                        <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                        <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                        <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                        <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
-                    </ul>--}}
-                </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="{{ Vite::asset('resources/images/team-8-270x227.jpg') }}" alt="" width="270" height="227"/>
-                    <h5 class="team-modern-name"><a href="#">Жилина Светлана</a></h5>
-                    <p class="team-modern-text">Инструктор по дайвингу, инструктор детской секции</p>
-                    {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
-                        <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                        <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                        <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                        <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
-                    </ul>--}}
-                </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="{{ Vite::asset('resources/images/team-2-270x227.jpg') }}" alt="" width="270" height="227"/>
-                    <h5 class="team-modern-name"><a href="#">Глухов Александр</a></h5>
-                    <p class="team-modern-text">Инструктор по дайвингу</p>
-                    {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
-                        <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                        <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                        <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                        <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
-                    </ul>--}}
-                </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="{{ Vite::asset('resources/images/team-3-270x227.jpg') }}" alt="" width="270" height="227"/>
-                    <h5 class="team-modern-name"><a href="#">Тимофеев Евгений</a></h5>
-                    <p class="team-modern-text">Инструктор по дайвингу</p>
-                    {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
-                        <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                        <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                        <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                        <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
-                    </ul>--}}
-                </article>
-                <article class="team-modern box-sm wow slideInUp" data-wow-delay=".3s"><img src="{{ Vite::asset('resources/images/team-1-270x227.jpg') }}" alt="" width="270" height="227"/>
-                    <h5 class="team-modern-name"><a href="#">Стремоухов Максим</a></h5>
-                    <p class="team-modern-text">Инструктор по дайвингу</p>
-                    {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
-                        <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                        <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                        <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                        <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
-                    </ul>--}}
-                </article>
+                @foreach ($teams as $team)
+                    <article class="team-modern box-sm wow slideInUp">
+                        <img
+                            src="{{ asset('storage/' . $team->image) }}"
+                            alt="Инструктор: {{ $team->first_name }} {{ $team->last_name }}"
+                            width="270"
+                            height="227"
+                        />
+                        <h5 class="team-modern-name">{{ $team->first_name }} {{ $team->last_name }}</h5>
+                        <p class="team-modern-text">{{ $team->position }}</p>
+                        {{--<ul class="list-inline team-modern-list-social list-social-2 list-inline-sm">
+                            <li><a class="icon mdi mdi-facebook" href="#"></a></li>
+                            <li><a class="icon mdi mdi-twitter" href="#"></a></li>
+                            <li><a class="icon mdi mdi-instagram" href="#"></a></li>
+                            <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
+                        </ul>--}}
+                    </article>
+                @endforeach
             </div>
         </div>
     </section>
