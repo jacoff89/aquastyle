@@ -80,7 +80,7 @@
     </div>
     <div class="footer-modern-panel text-center">
         <div class="container">
-            <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Дайвинг-центр "Аквастиль"</span><span>.&nbsp; Все права защищены.</span><span>&nbsp;</span><a href="privacy-policy.html">Политика конфиденциальности.</a></p>
+            <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Дайвинг-центр "Аквастиль"</span><span>.&nbsp; Все права защищены.</span><span>&nbsp;</span><a href="/privacy-policy">Политика конфиденциальности.</a></p>
         </div>
     </div>
 </footer>

@@ -12,7 +12,7 @@
         <div class="breadcrumbs-custom-footer">
             <div class="container">
                 <ul class="breadcrumbs-custom-path">
-                    <li><a href="/">Главная</a></li>
+                    <li><a href="{{ route('home') }}">Главная</a></li>
                     <li class="active">{{ $page->title }}</li>
                 </ul>
             </div>

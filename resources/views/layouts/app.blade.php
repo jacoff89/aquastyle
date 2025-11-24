@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="ru">
 <head>
     <title>Дайвинг клуб &quot;Аквастиль&quot; - обучиться дайвингу и фридайвингу, подводной охоте в Челябинске</title>
     <meta name="description"

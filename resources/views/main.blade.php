@@ -488,8 +488,8 @@
                                 <div class="col-sm-12">
                                     <div class="form-wrap">
                                         <label class="checkbox-inline">
-                                            <input name="input-checkbox" value="checkbox" type="checkbox">
-                                            <span class="context-dark">Я согласен на обработку моих <a class="context-dark" href="#">персональных данных</a></span>
+                                            <input name="input-checkbox" value="checkbox" type="checkbox"'>
+                                            <span class="context-dark">Я согласен с <a class="context-dark" href="/privacy-policy">политикой обработки персональных данных</a></span>
                                         </label>
                                     </div>
                                 </div>
