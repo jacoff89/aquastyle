@@ -487,8 +487,10 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-wrap">
-                                        <label class="checkbox-inline">
-                                            <input name="input-checkbox" value="checkbox" type="checkbox"'>
+                                        <div style="float: left">
+                                            <input style="cursor: pointer" id="agree" name="input-checkbox" value="checkbox" type="checkbox" data-constraints='@@Required(message="Необхоидмо согласиться с политикой")'>
+                                        </div>
+                                        <label style="margin-top: 0" class="checkbox-inline" for="agree">
                                             <span class="context-dark">Я согласен с <a class="context-dark" href="/privacy-policy">политикой обработки персональных данных</a></span>
                                         </label>
                                     </div>
