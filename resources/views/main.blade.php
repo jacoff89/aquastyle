@@ -491,7 +491,7 @@
                                             <input style="cursor: pointer" id="agree" name="input-checkbox" value="checkbox" type="checkbox" data-constraints='@@Required(message="Необхоидмо согласиться с политикой")'>
                                         </div>
                                         <label style="margin-top: 0" class="checkbox-inline" for="agree">
-                                            <span class="context-dark">Я согласен с <a class="context-dark" href="/privacy-policy">политикой обработки персональных данных</a></span>
+                                            <span class="context-dark">Я согласен с <a class="context-dark" style="color: white;text-decoration: underline;" target="_blank" href="/privacy-policy">политикой обработки персональных данных</a></span>
                                         </label>
                                     </div>
                                 </div>

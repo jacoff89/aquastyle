@@ -64,6 +64,7 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/91621881" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+    @include('partials.cookie-banner')
 @endenv
 </body>
 </html>
