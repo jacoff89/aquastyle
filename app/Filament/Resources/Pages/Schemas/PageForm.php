@@ -3,7 +3,7 @@
 namespace App\Filament\Resources\Pages\Schemas;
 
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use Filament\Schemas\Schema;
 
 class PageForm
@@ -18,8 +18,11 @@ class PageForm
                 TextInput::make('slug')
                     ->name('Ссылка')
                     ->required(),
-                Textarea::make('content')
+                TinyEditor::make('content')
                     ->name('Содержание')
+                    ->fileAttachmentsDisk('public')
+                    ->fileAttachmentsVisibility('public')
+                    ->fileAttachmentsDirectory('uploads/pages')
                     ->columnSpanFull(),
             ]);
     }
