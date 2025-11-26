@@ -16,17 +16,17 @@
                     <div class="rd-navbar-nav-wrap">
                         <!-- RD Navbar Nav-->
                         <ul class="rd-navbar-nav">
-                            <li class="rd-nav-item active"><a class="rd-nav-link" href="#main">Главная</a>
+                            <li class="rd-nav-item active"><a class="rd-nav-link" href="{{ route('home') }}#main">Главная</a>
                             </li>
-                            <li class="rd-nav-item"><a class="rd-nav-link" href="#services">Услуги</a>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="{{ route('home') }}#services">Услуги</a>
                             </li>
-                            <li class="rd-nav-item"><a class="rd-nav-link" href="#about">О нас</a>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="{{ route('home') }}#about">О нас</a>
                             </li>
-                            <li class="rd-nav-item"><a class="rd-nav-link" href="#reviews">Отзывы</a>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="{{ route('home') }}#reviews">Отзывы</a>
                             </li>
-                            <li class="rd-nav-item"><a class="rd-nav-link" href="#gallery">Галерея</a>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="{{ route('home') }}#gallery">Галерея</a>
                             </li>
-                            <li class="rd-nav-item"><a class="rd-nav-link" href="#team">Инструкторы</a>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="{{ route('home') }}#team">Инструкторы</a>
                             </li>
                             <li class="rd-nav-item"><a class="rd-nav-link" href="#contacts">Контакты</a>
                             </li>
