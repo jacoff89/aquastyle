@@ -11,7 +11,35 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css"
           href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CLato%7CComfortaa:300,400,700%7COpen+Sans:300,400,600,700">
-    <script src="/core.min.js?v={{ filemtime(public_path('core.min.js')) }}"></script>
+    <script src="/modules/jQuery.js?v={{ filemtime(public_path('modules/jQuery.js')) }}"></script>
+    <script src="/modules/jQueryMigrate.js?v={{ filemtime(public_path('modules/jQueryMigrate.js')) }}"></script>
+    <script src="/modules/Cookie.js?v={{ filemtime(public_path('modules/Cookie.js')) }}"></script>
+    <script src="/modules/Device.js?v={{ filemtime(public_path('modules/Device.js')) }}"></script>
+    <script src="/modules/ResizeEvent.js?v={{ filemtime(public_path('modules/ResizeEvent.js')) }}"></script>
+    <script src="/modules/Easing.js?v={{ filemtime(public_path('modules/Easing.js')) }}"></script>
+    <script src="/modules/TouchSwipe.js?v={{ filemtime(public_path('modules/TouchSwipe.js')) }}"></script>
+    <script src="/modules/Popper_js.js?v={{ filemtime(public_path('modules/Popper_js.js')) }}"></script>
+    <script src="/modules/Bootstrap.js?v={{ filemtime(public_path('modules/Bootstrap.js')) }}"></script>
+    <script src="/modules/Regula.js?v={{ filemtime(public_path('modules/Regula.js')) }}"></script>
+    <script src="/modules/Form.js?v={{ filemtime(public_path('modules/Form.js')) }}"></script>
+    <script src="/modules/RDInputLabel.js?v={{ filemtime(public_path('modules/RDInputLabel.js')) }}"></script>
+    <script src="/modules/Owl.js?v={{ filemtime(public_path('modules/Owl.js')) }}"></script>
+    <script src="/modules/Isotope.js?v={{ filemtime(public_path('modules/Isotope.js')) }}"></script>
+    <script src="/modules/RD.js?v={{ filemtime(public_path('modules/RD.js')) }}"></script>
+    <script src="/modules/UIToTop.js?v={{ filemtime(public_path('modules/UIToTop.js')) }}"></script>
+    <script src="/modules/Materianize.js?v={{ filemtime(public_path('modules/Materianize.js')) }}"></script>
+    <script src="/modules/Swiper.js?v={{ filemtime(public_path('modules/Swiper.js')) }}"></script>
+    <script src="/modules/Lightgallery.js?v={{ filemtime(public_path('modules/Lightgallery.js')) }}"></script>
+    <script src="/modules/WOW.js?v={{ filemtime(public_path('modules/WOW.js')) }}"></script>
+    <script src="/modules/Mousewheel.js?v={{ filemtime(public_path('modules/Mousewheel.js')) }}"></script>
+    <script src="/modules/PageTransition.js?v={{ filemtime(public_path('modules/PageTransition.js')) }}"></script>
+    <script src="/modules/Select2.js?v={{ filemtime(public_path('modules/Select2.js')) }}"></script>
+    <script src="/modules/Slick.js?v={{ filemtime(public_path('modules/Slick.js')) }}"></script>
+    <script src="/modules/MultiToggles.js?v={{ filemtime(public_path('modules/MultiToggles.js')) }}"></script>
+    <script src="/modules/_Util.js?v={{ filemtime(public_path('modules/_Util.js')) }}"></script>
+    <script src="/modules/_Counter.js?v={{ filemtime(public_path('modules/_Counter.js')) }}"></script>
+    <script src="/modules/_ProgressCircle.js?v={{ filemtime(public_path('modules/_ProgressCircle.js')) }}"></script>
+    <script src="/modules/_Countdown.js?v={{ filemtime(public_path('modules/_Countdown.js')) }}"></script>
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
     @endif
