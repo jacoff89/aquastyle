@@ -1,0 +1,562 @@
+.post-classic {
+    text-align: left;
+}
+
+.post-classic-figure {
+    display: block;
+    overflow: hidden;
+}
+
+.post-classic-figure img {
+    width: 100%;
+    transform: none;
+    will-change: transform;
+    transition: all .2s ease;
+}
+
+.post-classic-content {
+    padding: 15px;
+    background: #f9faf9;
+}
+
+.post-classic-title {
+    font-weight: 700;
+}
+
+* + .post-classic-title {
+    margin-top: 8px;
+}
+
+* + .post-classic-text {
+    margin-top: 6px;
+}
+
+@media (min-width: 768px) {
+    .post-classic-content {
+        padding: 25px 7% 30px;
+    }
+    .post-classic-text {
+        line-height: 1.74;
+    }
+    * + .post-classic-title {
+        margin-top: 14px;
+    }
+    * + .post-classic-text {
+        margin-top: 12px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .post-classic-content {
+        padding: 34px 7% 45px;
+    }
+    * + .post-classic-title {
+        margin-top: 20px;
+    }
+    * + .post-classic-text {
+        margin-top: 18px;
+    }
+}
+
+@media (min-width: 992px) {
+    .desktop .post-classic:hover .post-classic-figure img {
+        transform: scale(1.1);
+    }
+}
+
+.bg-gray-1 .post-classic-content,
+.bg-image-1 .post-classic-content {
+    background: #ffffff;
+}
+
+.post-modern {
+    text-align: left;
+}
+
+.post-modern-panel {
+    font-size: 0;
+    line-height: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.post-modern-panel > * {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.post-modern-panel > * {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.post-modern-panel > * + * {
+    border-left: 1px solid #e1e1e1;
+}
+
+.post-modern-tag {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    z-index: 1;
+}
+
+.post-modern-tag, .post-modern-tag:focus, .post-modern-tag:active {
+    color: #151515;
+}
+
+.post-modern-tag:hover {
+    color: #151515;
+}
+
+.post-modern-tag::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #0473db;
+    transition: inherit;
+    z-index: -1;
+}
+
+.post-modern-tag:hover {
+    color: #ffffff;
+}
+
+.post-modern-tag:hover::before {
+    height: 100%;
+}
+
+.post-modern-time {
+    font-size: 15px;
+    line-height: 1;
+}
+
+.post-modern-title {
+    font-weight: 500;
+    text-transform: none;
+}
+
+.post-modern-figure {
+    display: block;
+    overflow: hidden;
+}
+
+.post-modern-figure img {
+    width: 100%;
+    transform: none;
+    will-change: transform;
+    transition: all .3s ease;
+}
+
+.post-modern-link {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.post-modern-link:hover {
+    color: #151515;
+}
+
+* + .post-modern-title {
+    margin-top: 15px;
+}
+
+* + .post-modern-figure {
+    margin-top: 20px;
+}
+
+* + .post-modern-text {
+    margin-top: 20px;
+}
+
+* + .post-modern-link {
+    margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+    * + .post-modern-title {
+        margin-top: 20px;
+    }
+    * + .post-modern-figure {
+        margin-top: 30px;
+    }
+    * + .post-modern-text {
+        margin-top: 30px;
+    }
+    * + .post-modern-link {
+        margin-top: 22px;
+    }
+}
+
+@media (min-width: 992px) {
+    .post-modern-title {
+        max-width: 85%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .post-modern-title {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    .desktop .post-modern:hover .post-modern-figure img {
+        transform: scale(1.1);
+    }
+}
+
+.post-creative {
+    text-align: center;
+}
+
+.post-creative-figure {
+    display: block;
+    overflow: hidden;
+}
+
+.post-creative-figure img {
+    width: 100%;
+    transform: none;
+    will-change: transform;
+    transition: all .2s ease;
+}
+
+.post-creative-title {
+    line-height: 1.44;
+    font-weight: 500;
+}
+
+* + .post-creative-content {
+    margin-top: 10px;
+}
+
+* + .post-creative-time {
+    margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+    * + .post-creative-content {
+        margin-top: 18px;
+    }
+    * + .post-creative-time {
+        margin-top: 12px;
+    }
+}
+
+@media (min-width: 1200px) {
+    * + .post-creative-content {
+        margin-top: 24px;
+    }
+    * + .post-creative-time {
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .post-creative-content {
+        padding: 0 6%;
+    }
+}
+
+@media (min-width: 992px) {
+    .desktop .post-creative:hover .post-creative-figure img {
+        transform: scale(1.05);
+    }
+}
+
+.post-lisa {
+    text-align: left;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.09);
+}
+
+.post-lisa-2 .post-lisa-tag::before {
+    background: #82e3d0;
+}
+
+.post-lisa-content {
+    padding: 15px;
+}
+
+.post-lisa-tag {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    z-index: 1;
+}
+
+.post-lisa-tag, .post-lisa-tag:focus, .post-lisa-tag:active {
+    color: #151515;
+}
+
+.post-lisa-tag:hover {
+    color: #151515;
+}
+
+.post-lisa-tag::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #fff669;
+    transition: inherit;
+    z-index: -1;
+}
+
+.post-lisa-tag:hover::before {
+    height: 100%;
+}
+
+.post-lisa-title {
+    font-weight: 500;
+    letter-spacing: .05em;
+    text-transform: none;
+}
+
+.post-lisa-figure {
+    display: block;
+    overflow: hidden;
+}
+
+.post-lisa-figure img {
+    width: 100%;
+    transform: none;
+    will-change: transform;
+    transition: all .2s ease;
+}
+
+* + .post-lisa-title {
+    margin-top: 7px;
+}
+
+* + .post-lisa-time {
+    margin-top: 9px;
+}
+
+@media (min-width: 768px) {
+    .post-lisa-content {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .post-lisa-content {
+        padding: 35px 65px;
+    }
+}
+
+@media (min-width: 992px) {
+    .desktop .post-lisa:hover .post-lisa-figure img {
+        transform: scale(1.05);
+    }
+}
+
+.post-nikki {
+    position: relative;
+    text-align: center;
+}
+
+.post-nikki-2 {
+    color: #ffffff;
+}
+
+.post-nikki-2 .post-nikki-title {
+    color: inherit;
+}
+
+.post-nikki-2 .post-nikki-title a:hover {
+    color: #f8ea49;
+}
+
+.post-nikki-2 .post-nikki-time {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.post-nikki-figure {
+    display: block;
+    overflow: hidden;
+}
+
+.post-nikki-figure img {
+    width: 100%;
+    transform: none;
+    will-change: transform;
+    transition: all .2s ease;
+}
+
+.post-nikki-body {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.post-nikki-body::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(89, 99, 108, 0.13) 0%, rgba(76, 89, 99, 0.25) 23%, rgba(73, 86, 97, 0.28) 28%, rgba(46, 64, 78, 0.53) 67%, rgba(36, 55, 70, 0.61) 82%, rgba(27, 47, 62, 0.71) 100%);
+    z-index: -1;
+}
+
+.post-nikki-body > * {
+    pointer-events: auto;
+}
+
+.post-nikki-title {
+    font-size: 16px;
+    line-height: 1.38462;
+    color: #151515;
+}
+
+.post-nikki-title a, .post-nikki-title a:focus, .post-nikki-title a:active {
+    color: inherit;
+}
+
+.post-nikki-title a:hover {
+    color: #0473db;
+}
+
+.post-nikki-title {
+    font-weight: 400;
+    letter-spacing: .05em;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* + .post-nikki-title {
+    margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+    .post-nikki {
+        text-align: left;
+    }
+    .post-nikki .unit .post-nikki-figure {
+        width: 150px;
+    }
+    .post-nikki-body {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .post-nikki .unit .post-nikki-figure {
+        width: 210px;
+    }
+    .post-nikki-title {
+        font-size: 22px;
+    }
+    * + .post-nikki-title {
+        margin-top: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .post-nikki .unit .post-nikki-figure {
+        width: auto;
+    }
+    .post-nikki-body {
+        padding: 12% 10%;
+    }
+    .post-nikki-title {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 992px) {
+    .desktop .post-nikki:hover .post-nikki-figure img {
+        transform: scale(1.05);
+    }
+}
+
+.post-minimal-figure {
+    display: block;
+    overflow: hidden;
+}
+
+.post-minimal-figure img {
+    width: 100%;
+    will-change: transform;
+    transition: all .3s ease;
+}
+
+@media (min-width: 992px) {
+    .post-minimal-figure img {
+        max-width: 106px;
+    }
+}
+
+.post-minimal-title {
+    color: #151515;
+}
+
+.post-minimal-title a, .post-minimal-title a:focus, .post-minimal-title a:active {
+    color: inherit;
+}
+
+.post-minimal-title a:hover {
+    color: #0473db;
+}
+
+.post-minimal-time {
+    color: #0473db;
+}
+
+* + .post-minimal-time {
+    margin-top: 2px;
+}
+
+@media (min-width: 992px) {
+    .desktop .post-minimal:hover .post-minimal-figure img {
+        transform: scale(1.05);
+    }
+}
+
+.single-post-bottom-panel {
+    padding-top: 30px;
+    border-top: 1px solid #e1e1e1;
+}
+
+.single-post-title {
+    text-transform: uppercase;
+}
+
+.single-post-title + .row {
+    margin-top: 30px;
+}
+
+* + .single-post-bottom-panel {
+    margin-top: 40px;
+}

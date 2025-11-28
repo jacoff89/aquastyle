@@ -1,0 +1,192 @@
+.rd-navbar-creative.rd-navbar-static .rd-navbar-aside-outer,
+.rd-navbar-creative.rd-navbar-static .rd-navbar-main-outer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.rd-navbar-creative.rd-navbar-static .rd-navbar-main {
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: #e1e1e1 transparent transparent transparent;
+}
+
+.rd-navbar-creative.rd-navbar-static .rd-navbar-aside,
+.rd-navbar-creative.rd-navbar-static .rd-navbar-main {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1170px;
+}
+
+.rd-navbar-creative.rd-navbar-static .rd-navbar-aside {
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0;
+}
+
+@media (min-width: 1200px) {
+    .rd-navbar-creative.rd-navbar-static .rd-navbar-aside {
+        padding: 13px 0;
+    }
+}
+
+@media (min-width: 1600px) {
+    .rd-navbar-creative.rd-navbar-static .rd-navbar-aside {
+        padding: 23px 0;
+    }
+}
+
+.rd-navbar-creative.rd-navbar-static .rd-navbar-main {
+    padding: 23px 0;
+    justify-content: center;
+}
+
+.rd-navbar-creative.rd-navbar-static .rd-navbar-collapse,
+.rd-navbar-creative.rd-navbar-static .rd-navbar-aside-element {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.rd-navbar-creative.rd-navbar-static .rd-navbar-collapse .button {
+    display: none;
+}
+
+.rd-navbar-creative.rd-navbar-static .rd-navbar-aside-element {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rd-navbar-creative.rd-navbar-static .rd-navbar-aside-element > * + * {
+    margin-left: 18px;
+}
+
+.rd-navbar-creative.rd-navbar-static .rd-navbar-panel {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.rd-navbar-creative.rd-navbar-static .rd-navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 86px;
+}
+
+.rd-navbar-creative.rd-navbar-static .rd-navbar-brand img {
+    width: auto;
+    height: auto;
+    max-width: 180px;
+    max-height: 86px;
+}
+
+.rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck, .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone {
+    box-shadow: 0 0 5px 0 rgba(1, 3, 4, 0.19);
+}
+
+.rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main, .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main {
+    border-color: transparent;
+}
+
+.rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-aside-outer, .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone .rd-navbar-aside-outer {
+    display: none;
+}
+
+.rd-navbar-creative.rd-navbar-static .contacts-classic {
+    text-align: left;
+}
+
+.rd-navbar-creative.rd-navbar-fixed .rd-navbar-aside-element {
+    position: fixed;
+    top: 11px;
+    right: 35px;
+    z-index: 10000;
+}
+
+.rd-navbar-creative.rd-navbar-fixed .rd-navbar-collapse * + .rd-navbar-basket {
+    margin-top: 15px;
+}
+
+.rd-navbar-creative.rd-navbar-fixed .rd-navbar-collapse-toggle {
+    width: 32px;
+}
+
+.rd-navbar-creative.rd-navbar-fixed .select-inline {
+    top: 12px;
+    right: 36px;
+}
+
+.rd-navbar-creative.rd-navbar-fixed .rd-navbar-button {
+    display: none;
+}
+
+.rd-navbar-static-linked .header-creative-wrap .rd-navbar-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1078;
+}
+
+.context-dark .rd-navbar-creative.rd-navbar-static, .bg-gray-700 .rd-navbar-creative.rd-navbar-static, .bg-gray-3 .rd-navbar-creative.rd-navbar-static, .bg-brown-1 .rd-navbar-creative.rd-navbar-static, .bg-primary .rd-navbar-creative.rd-navbar-static {
+    background: transparent;
+}
+
+.context-dark .rd-navbar-creative.rd-navbar-static .rd-navbar-main, .bg-gray-700 .rd-navbar-creative.rd-navbar-static .rd-navbar-main, .bg-gray-3 .rd-navbar-creative.rd-navbar-static .rd-navbar-main, .bg-brown-1 .rd-navbar-creative.rd-navbar-static .rd-navbar-main, .bg-primary .rd-navbar-creative.rd-navbar-static .rd-navbar-main {
+    border-color: rgba(255, 255, 255, 0.23);
+}
+
+.context-dark .rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck, .bg-gray-700 .rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck, .bg-gray-3 .rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck, .bg-brown-1 .rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck, .bg-primary .rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck, .context-dark .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone, .bg-gray-700 .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone, .bg-gray-3 .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone, .bg-brown-1 .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone, .bg-primary .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone {
+    background: #404147;
+}
+
+.context-dark .rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main, .bg-gray-700 .rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main, .bg-gray-3 .rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main, .bg-brown-1 .rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main, .bg-primary .rd-navbar-creative.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main, .context-dark .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main, .bg-gray-700 .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main, .bg-gray-3 .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main, .bg-brown-1 .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main, .bg-primary .rd-navbar-creative.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main {
+    border-color: transparent;
+}
+
+.context-dark .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck, .bg-primary .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck, .context-dark .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone, .bg-primary .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone {
+    background: #ffffff;
+}
+
+.context-dark .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-link, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-link, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-link, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-link, .bg-primary .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-link, .context-dark .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-link, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-link, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-link, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-link, .bg-primary .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-link {
+    color: #151515;
+}
+
+.context-dark .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-link:hover, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-link:hover, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-link:hover, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-link:hover, .bg-primary .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-link:hover, .context-dark .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-link:hover, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-link:hover, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-link:hover, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-link:hover, .bg-primary .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-link:hover {
+    color: #0473db;
+}
+
+.context-dark .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-item.active .rd-nav-link, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-item.active .rd-nav-link, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-item.active .rd-nav-link, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-item.active .rd-nav-link, .bg-primary .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck .rd-nav-item.active .rd-nav-link, .context-dark .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-item.active .rd-nav-link, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-item.active .rd-nav-link, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-item.active .rd-nav-link, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-item.active .rd-nav-link, .bg-primary .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone .rd-nav-item.active .rd-nav-link {
+    color: #0473db;
+}
+
+.context-dark .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck::before, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck::before, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck::before, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck::before, .bg-primary .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-stuck::before, .context-dark .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone::before, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone::before, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone::before, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone::before, .bg-primary .rd-navbar-creative-2.rd-navbar-static.rd-navbar--is-clone::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat;
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+.rd-navbar-creative .rd-navbar-fixed .rd-navbar-fixed-element-3 {
+    right: 84px;
+}
+
+.context-dark .rd-navbar-creative-2.rd-navbar-static .rd-navbar-basket span, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static .rd-navbar-basket span, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static .rd-navbar-basket span, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static .rd-navbar-basket span, .bg-primary .rd-navbar-creative-2.rd-navbar-static .rd-navbar-basket span {
+    color: inherit;
+}
+
+.context-dark .rd-navbar-creative-2.rd-navbar-static .select-inline .select2-choice, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static .select-inline .select2-choice, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static .select-inline .select2-choice, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static .select-inline .select2-choice, .bg-primary .rd-navbar-creative-2.rd-navbar-static .select-inline .select2-choice {
+    color: #151515;
+    background: #ffffff;
+}
+
+.context-dark .rd-navbar-creative-2.rd-navbar-static .contacts-classic-title, .bg-gray-700 .rd-navbar-creative-2.rd-navbar-static .contacts-classic-title, .bg-gray-3 .rd-navbar-creative-2.rd-navbar-static .contacts-classic-title, .bg-brown-1 .rd-navbar-creative-2.rd-navbar-static .contacts-classic-title, .bg-primary .rd-navbar-creative-2.rd-navbar-static .contacts-classic-title {
+    color: inherit;
+}

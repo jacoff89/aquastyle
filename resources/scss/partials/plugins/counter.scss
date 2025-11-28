@@ -1,0 +1,156 @@
+.counter-classic {
+    text-align: center;
+}
+
+.counter-classic-2 .counter-classic-decor::before {
+    background: #f8ea49;
+}
+
+.counter-classic-number {
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: none;
+}
+
+.counter-classic-number .symbol {
+    letter-spacing: .1em;
+}
+
+.counter-classic-title {
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.counter-classic-decor {
+    font-size: 0;
+    line-height: 0;
+}
+
+.counter-classic-decor::before {
+    display: inline-block;
+    content: '';
+    width: 40px;
+    height: 3px;
+    background: #0473db;
+}
+
+* + .counter-classic-decor {
+    margin-top: 10px;
+}
+
+* + .counter-classic-title {
+    margin-top: 16px;
+}
+
+@media (max-width: 767.98px) {
+    .counter-classic-title {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .counter-classic-decor::before {
+        width: 66px;
+    }
+    * + .counter-classic-decor {
+        margin-top: 20px;
+    }
+    * + .counter-classic-title {
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    * + .counter-classic-decor {
+        margin-top: 24px;
+    }
+    * + .counter-classic-title {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    * + .counter-classic-title {
+        margin-top: 36px;
+    }
+}
+
+.counter-modern {
+    text-align: center;
+}
+
+.counter-modern-number {
+    text-transform: none;
+}
+
+.counter-modern-decor {
+    font-size: 0;
+    line-height: 0;
+}
+
+.counter-modern-decor::before {
+    display: inline-block;
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: #0473db;
+}
+
+* + .counter-modern-decor {
+    margin-top: 10px;
+}
+
+* + .counter-modern-title {
+    margin-top: 12px;
+}
+
+@media (max-width: 767.98px) {
+    .counter-modern-title {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .counter-modern-decor::before {
+        width: 42px;
+    }
+    * + .counter-modern-decor {
+        margin-top: 16px;
+    }
+    * + .counter-modern-title {
+        margin-top: 18px;
+    }
+}
+
+@media (min-width: 992px) {
+    * + .counter-modern-decor {
+        margin-top: 18px;
+    }
+    * + .counter-modern-title {
+        margin-top: 24px;
+    }
+}
+
+.context-dark .counter-modern-decor::before, .bg-gray-700 .counter-modern-decor::before, .bg-gray-3 .counter-modern-decor::before, .bg-brown-1 .counter-modern-decor::before, .bg-primary .counter-modern-decor::before {
+    background: #ffffff;
+}
+
+.box-ordered {
+    counter-reset: div;
+}
+
+.box-ordered .box-ordered-item::before {
+    content: counter(div, decimal-leading-zero);
+    counter-increment: div;
+}
+
+.box-ordered-2 {
+    counter-reset: div;
+}
+
+.box-ordered-2 .box-ordered-item::before {
+    content: counter(div, decimal);
+    counter-increment: div;
+}

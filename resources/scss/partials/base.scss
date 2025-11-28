@@ -1,0 +1,294 @@
+a:focus,
+button:focus {
+    outline: none !important;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+blockquote {
+    padding: 0;
+    margin: 0;
+}
+
+input,
+button,
+select,
+textarea {
+    outline: none;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li,
+ol li {
+    display: block;
+}
+
+dl {
+    margin: 0;
+}
+
+dt,
+dd {
+    line-height: inherit;
+}
+
+dt {
+    font-weight: inherit;
+}
+
+dd {
+    margin-bottom: 0;
+}
+
+cite {
+    font-style: normal;
+}
+
+form {
+    margin-bottom: 0;
+}
+
+blockquote {
+    padding-left: 0;
+    border-left: 0;
+}
+
+address {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+html p a:hover {
+    text-decoration: none;
+}
+
+/*
+* Contexts
+*/
+.context-dark, .bg-gray-700, .bg-gray-3, .bg-brown-1, .bg-primary,
+.context-dark h1,
+.bg-gray-700 h1,
+.bg-gray-3 h1,
+.bg-brown-1 h1,
+.bg-primary h1, .context-dark h2, .bg-gray-700 h2, .bg-gray-3 h2, .bg-brown-1 h2, .bg-primary h2, .context-dark h3, .bg-gray-700 h3, .bg-gray-3 h3, .bg-brown-1 h3, .bg-primary h3, .context-dark h4, .bg-gray-700 h4, .bg-gray-3 h4, .bg-brown-1 h4, .bg-primary h4, .context-dark h5, .bg-gray-700 h5, .bg-gray-3 h5, .bg-brown-1 h5, .bg-primary h5, .context-dark h6, .bg-gray-700 h6, .bg-gray-3 h6, .bg-brown-1 h6, .bg-primary h6, .context-dark [class^='heading-'], .bg-gray-700 [class^='heading-'], .bg-gray-3 [class^='heading-'], .bg-brown-1 [class^='heading-'], .bg-primary [class^='heading-'] {
+    color: #ffffff;
+}
+
+/*
+* Page layout
+*/
+.page {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    opacity: 0;
+}
+
+.page.fadeIn {
+    animation-timing-function: ease-out;
+}
+
+.page.fadeOut {
+    animation-timing-function: ease-in;
+}
+
+[data-x-mode] .page {
+    opacity: 1;
+}
+
+html.boxed body {
+    background: #e1e1e1 url(../images/bg-pattern-boxed.png) repeat fixed;
+}
+
+@media (min-width: 1630px) {
+    html.boxed .page {
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 0 23px 0 rgba(1, 1, 1, 0.1);
+    }
+    html.boxed .rd-navbar-static {
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    html.boxed .rd-navbar-static.rd-navbar--is-stuck {
+        max-width: 1600px;
+        width: 100%;
+        left: calc(50% - 1600px);
+        right: calc(50% - 1600px);
+    }
+}
+
+/*
+* Offsets
+*/
+* + p {
+    margin-top: 15px;
+}
+
+* + img {
+    margin-top: 30px;
+}
+
+h1 + p {
+    margin-top: 12px;
+}
+
+h2 + p {
+    margin-top: 12px;
+}
+
+h3 + p {
+    margin-top: 14px;
+}
+
+h4 + p {
+    margin-top: 15px;
+}
+
+h5 + p {
+    margin-top: 14px;
+}
+
+h6 + p {
+    margin-top: 14px;
+}
+
+h2 + h5 {
+    margin-top: 16px;
+}
+
+h3 + h2 {
+    margin-top: 18px;
+}
+
+h3 + h6 {
+    margin-top: 16px;
+}
+
+p + h2,
+p + .heading-2 {
+    margin-top: 15px;
+}
+
+p + p {
+    margin-top: 12px;
+}
+
+img + p {
+    margin-top: 15px;
+}
+
+h3 + img {
+    margin-top: 42px;
+}
+
+* + .row {
+    margin-top: 30px;
+}
+
+* + .owl-carousel {
+    margin-top: 30px;
+}
+
+* + .big {
+    margin-top: 20px;
+}
+
+* + .text-block {
+    margin-top: 27px;
+}
+
+* + .button-wrap,
+* + .button {
+    margin-top: 30px;
+}
+
+.row + h3,
+.row + .heading-3 {
+    margin-top: 80px;
+}
+
+.container + .container {
+    margin-top: 35px;
+}
+
+.row + .row {
+    margin-top: 35px;
+}
+
+@media (min-width: 768px) {
+    * + .row {
+        margin-top: 40px;
+    }
+    * + .owl-carousel {
+        margin-top: 40px;
+    }
+    * + .row-sm {
+        margin-top: 35px;
+    }
+    * + .offset-top-md-20 {
+        margin-top: 20px;
+    }
+    h3 + .big {
+        margin-top: 24px;
+    }
+    .row + .row {
+        margin-top: 50px;
+    }
+    .row + .button {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 + p {
+        margin-top: 6px;
+    }
+    * + .row-lg {
+        margin-top: 50px;
+    }
+    * + .row-xl {
+        margin-top: 60px;
+    }
+    * + .row-xxl {
+        margin-top: 70px;
+    }
+    * + .owl-carousel {
+        margin-top: 50px;
+    }
+    .container + .container {
+        margin-top: 60px;
+    }
+    .row + .row {
+        margin-top: 60px;
+    }
+    .row + .button {
+        margin-top: 60px;
+    }
+}

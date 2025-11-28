@@ -1,0 +1,144 @@
+.progress-linear {
+    position: relative;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.progress-linear-header > * {
+    max-width: 50%;
+}
+
+.progress-linear-body {
+    height: 6px;
+    border-radius: 6px;
+    background: #d7d7d7;
+}
+
+.progress-linear-bar {
+    position: relative;
+    width: 0;
+    height: inherit;
+    border-radius: inherit;
+    background: #0473db;
+    transition: .5s all ease-in-out;
+}
+
+.progress-linear-bar::before {
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: inherit;
+    transform: skew(-45deg);
+    transform-origin: 50% 100%;
+    background: inherit;
+}
+
+.progress-linear-counter {
+    position: absolute;
+    bottom: 0;
+    right: 14px;
+    margin-bottom: 12px;
+    transform: translate3d(50%, 0, 0);
+    will-change: transform;
+}
+
+.progress-linear-counter::after {
+    content: "%";
+}
+
+.progress-red .progress-linear-bar {
+    background: #f2717a;
+}
+
+.progress-red .progress-linear-bar::before {
+    border-bottom-color: #f2717a;
+}
+
+.progress-red .progress-marker {
+    background: #f2717a;
+}
+
+.progress-yellow .progress-linear-bar {
+    background: #e9da5e;
+}
+
+.progress-yellow .progress-linear-bar::before {
+    border-bottom-color: #e9da5e;
+}
+
+.progress-yellow .progress-marker {
+    background: #e9da5e;
+}
+
+* + .progress-linear-body {
+    margin-top: 12px;
+}
+
+* + .progress-linear {
+    margin-top: 35px;
+}
+
+.progress-linear + .progress-linear {
+    margin-top: 25px;
+}
+
+@media (min-width: 768px) {
+    .progress-linear {
+        font-size: 14px;
+    }
+    .progress-linear + .progress-linear {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    .progress-linear + .progress-linear {
+        margin-top: 46px;
+    }
+}
+
+/*
+*
+* Circle Progress Bars
+*/
+.progress-bar-circle {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.progress-bar-circle canvas {
+    vertical-align: middle;
+}
+
+.progress-bar-circle span {
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    font-size: 36px;
+    line-height: 36px;
+    transform: translate(-50%, -50%);
+    color: #9b9b9b;
+}
+
+.progress-bar-circle span::after {
+    content: "%";
+}
+
+.progress-bar-circle-title {
+    font-size: 14px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+* + .progress-bar-circle-title {
+    margin-top: 12px;
+}

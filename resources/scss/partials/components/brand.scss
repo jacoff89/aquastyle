@@ -1,0 +1,19 @@
+.brand {
+    display: inline-block;
+}
+
+.brand .brand-logo-light {
+    display: none;
+}
+
+.brand .brand-logo-dark {
+    display: block;
+}
+
+.brand .brand-logo-fixed {
+    display: none;
+}
+
+.brand * + * {
+    margin-top: 0;
+}

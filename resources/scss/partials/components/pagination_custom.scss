@@ -1,0 +1,117 @@
+.pagination {
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 870px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    line-height: 0;
+}
+
+@media (min-width: 768px) {
+    .pagination {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
+.page-item {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.page-link {
+    display: inline-block;
+    min-width: 24px;
+    padding: 0px 5px;
+    border: 0 solid transparent;
+    font-size: 18px;
+    line-height: 1.33333;
+    font-weight: 500;
+    letter-spacing: 0;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    transition: all 0.25s ease-in-out;
+}
+
+.page-link, .page-link:focus, .page-link:active {
+    color: #151515;
+    background-color: transparent;
+}
+
+.page-link:hover {
+    color: #0473db;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.page-link:focus {
+    box-shadow: none;
+}
+
+.page-item.active > .page-link, .page-item.active > .page-link:hover, .page-item.active > .page-link:focus, .page-item.active > .page-link:active {
+    color: #0473db;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.page-item.disabled > .page-link {
+    color: rgba(21, 21, 21, 0.5);
+}
+
+.page-item.disabled > .page-link {
+    display: none;
+}
+
+.page-item-control {
+    position: absolute;
+}
+
+.page-item-control .icon::before {
+    font-family: "Material Design Icons";
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.page-item-control:first-child {
+    left: 0;
+}
+
+.page-item-control:first-child .icon::before {
+    content: '\f14a';
+    margin-left: -1px;
+}
+
+@media (min-width: 768px) {
+    .page-item-control:first-child {
+        left: 30px;
+    }
+}
+
+.page-item-control:last-child {
+    right: 0;
+}
+
+.page-item-control:last-child .icon::before {
+    content: '\f14f';
+    margin-right: -1px;
+}
+
+@media (min-width: 768px) {
+    .page-item-control:last-child {
+        right: 30px;
+    }
+}
+
+* + .pagination-wrap {
+    margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+    * + .pagination-wrap {
+        margin-top: 55px;
+    }
+}

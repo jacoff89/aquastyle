@@ -1,0 +1,339 @@
+.table-custom {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    background: #ffffff;
+    border-collapse: collapse;
+}
+
+.table-custom th {
+    padding: 12px 24px;
+    font-size: 14px;
+    line-height: 1.72;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #151515;
+    background: #eff3f8;
+}
+
+@media (max-width: 991.98px) {
+    .table-custom th {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.table-custom td {
+    padding: 13px 24px;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: .05em;
+    background: #ffffff;
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #777777;
+    min-width: 170px;
+}
+
+.table-custom tfoot td {
+    color: #151515;
+}
+
+.table-custom tr {
+    border: 1px solid #eff3f8;
+}
+
+* + .table-custom-responsive {
+    margin-top: 30px;
+}
+
+h5 + .table-custom-responsive {
+    margin-top: 25px;
+}
+
+@media (min-width: 768px) {
+    * + .table-custom-responsive {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    h3 + .table-custom-responsive {
+        margin-top: 50px;
+    }
+    .title-group + .table-custom-responsive {
+        margin-top: 55px;
+    }
+    .table-custom-responsive + .group-justify {
+        margin-top: 35px;
+    }
+}
+
+.table-custom.table-custom-primary thead th {
+    color: #ffffff;
+    background: #0473db;
+}
+
+.table-custom.table-custom-primary thead tr {
+    border-color: #0473db;
+}
+
+.table-custom.table-custom-bordered tbody tr {
+    border: none;
+}
+
+.table-custom.table-custom-bordered td {
+    border: 1px solid #eff3f8;
+}
+
+.table-custom.table-custom-striped {
+    border-bottom: 1px solid #eff3f8;
+}
+
+.table-custom.table-custom-striped tr {
+    border: none;
+}
+
+.table-custom.table-custom-striped tbody tr:nth-of-type(odd) td {
+    background: transparent;
+}
+
+.table-custom.table-custom-striped tbody tr:nth-of-type(even) td {
+    background: #eff3f8;
+}
+
+@media (max-width: 991.98px) {
+    .table-custom-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+    .table-custom-responsive.table-bordered {
+        border: 0;
+    }
+}
+
+.table-cart {
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #e1e1e1;
+}
+
+.table-cart thead tr {
+    border: 1px solid #e1e1e1;
+}
+
+.table-cart tr {
+    border: none;
+}
+
+.table-cart th:first-child,
+.table-cart td:first-child {
+    text-align: left;
+}
+
+@media (min-width: 992px) {
+    .table-cart th:first-child,
+    .table-cart td:first-child {
+        padding-left: 30px;
+    }
+}
+
+.table-cart tbody tr td {
+    padding: 12px 14px;
+}
+
+.table-cart tbody tr:first-child td {
+    padding-top: 26px;
+}
+
+.table-cart tbody tr:last-child td {
+    padding-bottom: 26px;
+}
+
+.table-cart th {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #777777;
+    background: #ffffff;
+}
+
+@media (min-width: 992px) {
+    .table-cart th {
+        font-size: 18px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+}
+
+.table-cart td {
+    width: auto;
+    min-width: auto;
+    font-size: 16px;
+    letter-spacing: .075em;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #151515;
+}
+
+.table-cart td:first-child {
+    width: 50%;
+    min-width: 280px;
+}
+
+.table-cart td:first-child > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media (min-width: 992px) {
+    .table-cart td:first-child {
+        min-width: 500px;
+    }
+}
+
+.table-cart td:nth-child(2), .table-cart td:nth-child(4) {
+    width: 13%;
+}
+
+.table-cart td:nth-child(2), .table-cart td:nth-child(4) {
+    min-width: 100px;
+}
+
+.table-cart td:nth-child(3) {
+    min-width: 150px;
+}
+
+@media (min-width: 992px) {
+    .table-cart td {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .table-cart td {
+        font-size: 24px;
+    }
+}
+
+.table-cart-link {
+    font-weight: 500;
+    letter-spacing: .05em;
+}
+
+.table-cart-link, .table-cart-link:focus, .table-cart-link:active {
+    color: inherit;
+}
+
+.table-cart-link:hover {
+    color: #0473db;
+}
+
+.table-cart-figure {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    max-width: 90px;
+    background: #eff3f8;
+}
+
+@media (min-width: 992px) {
+    .table-cart-figure {
+        max-width: 146px;
+    }
+}
+
+.table-cart-figure + a {
+    margin-left: 15px;
+}
+
+@media (min-width: 992px) {
+    .table-cart-figure + a {
+        margin-left: 30px;
+    }
+}
+
+.table-checkout {
+    text-transform: uppercase;
+}
+
+.table-checkout tr {
+    border-color: #e1e1e1;
+}
+
+.table-checkout tr + tr td {
+    border-top: 1px solid #e1e1e1;
+}
+
+.table-checkout td {
+    padding: 20px 20px;
+    font-size: 16px;
+    letter-spacing: .05em;
+    color: #151515;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.table-checkout td:first-child {
+    min-width: 190px;
+}
+
+.table-checkout td:last-child {
+    min-width: 150px;
+    text-align: right;
+}
+
+@media (min-width: 576px) {
+    .table-checkout td {
+        padding: 22px 50px 22px 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .table-checkout td {
+        font-size: 18px;
+    }
+}
+
+.table-project tr {
+    border: none;
+}
+
+.table-project td {
+    color: #9b9b9b;
+    letter-spacing: .025em;
+    border: 1px solid #e1e1e1;
+}
+
+.table-project td:first-child {
+    text-align: center;
+    min-width: 73px;
+    width: 11%;
+    padding: 20px 15px;
+}
+
+.table-project td:last-child {
+    padding-left: 34px;
+    padding-right: 34px;
+    min-width: 260px;
+}
+
+.table-project .icon {
+    font-size: 24px;
+    color: #0473db;
+}
+
+.table-project .icon-26 {
+    font-size: 26px;
+}
+
+.table-project .icon-28 {
+    font-size: 28px;
+}
+
+.table-project td span {
+    color: #151515;
+}

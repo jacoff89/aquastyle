@@ -1,0 +1,594 @@
+.rd-navbar-fixed {
+    display: block;
+}
+
+.rd-navbar-fixed .rd-navbar-toggle {
+    display: inline-block;
+}
+
+.rd-navbar-fixed .rd-navbar-brand {
+    position: relative;
+    margin-left: 6px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 22px;
+    line-height: 46px;
+}
+
+.rd-navbar-fixed .rd-navbar-brand img {
+    max-width: 120px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
+}
+
+.rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-dark,
+.rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-light {
+    display: none;
+}
+
+.rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-fixed {
+    display: block;
+}
+
+.rd-navbar-fixed .rd-navbar-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1078;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding: 4px;
+}
+
+.rd-navbar-fixed .rd-navbar-nav-wrap {
+    position: fixed;
+    left: 0;
+    top: -56px;
+    bottom: -56px;
+    z-index: 1077;
+    width: 270px;
+    padding: 112px 0 81px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    font-size: 14px;
+    line-height: 34px;
+    transform: translateX(-110%);
+}
+
+.rd-navbar-fixed .rd-navbar-nav-wrap::-webkit-scrollbar {
+    width: 4px;
+}
+
+.rd-navbar-fixed .rd-navbar-nav-wrap::-webkit-scrollbar-thumb {
+    background: #49a5fc;
+    border: none;
+    border-radius: 0;
+    opacity: .2;
+}
+
+.rd-navbar-fixed .rd-navbar-nav-wrap::-webkit-scrollbar-track {
+    background: #0473db;
+    border: none;
+    border-radius: 0;
+}
+
+.rd-navbar-fixed .rd-navbar-nav-wrap.active {
+    transform: translateX(0);
+}
+
+.rd-navbar-fixed .rd-navbar-nav {
+    display: block;
+    margin: 15px 0;
+    height: auto;
+    text-align: left;
+}
+
+.rd-navbar-fixed .rd-nav-item {
+    text-align: left;
+}
+
+.rd-navbar-fixed .rd-nav-item + .rd-nav-item {
+    margin-top: 4px;
+}
+
+.rd-navbar-fixed .rd-nav-link {
+    display: block;
+    padding: 9px 50px 9px 12px;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.rd-navbar-fixed li.opened > .rd-navbar-dropdown {
+    padding: 4px 0 0;
+}
+
+.rd-navbar-fixed li.opened > .rd-navbar-megamenu {
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.rd-navbar-fixed li.opened > .rd-menu {
+    opacity: 1;
+    height: auto;
+}
+
+.rd-navbar-fixed li.opened > .rd-navbar-submenu-toggle::after {
+    transform: rotate(180deg);
+}
+
+.rd-navbar-fixed .rd-menu {
+    display: none;
+    transition: opacity 0.3s, height 0.4s ease;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.rd-navbar-fixed .rd-navbar-submenu {
+    position: relative;
+}
+
+.rd-navbar-fixed .rd-navbar-submenu .rd-navbar-dropdown .rd-navbar-submenu-toggle:after {
+    height: 34px;
+    line-height: 34px;
+}
+
+.rd-navbar-fixed .rd-navbar-submenu .rd-navbar-dropdown > li > a {
+    padding-left: 24px;
+}
+
+.rd-navbar-fixed .rd-navbar-submenu .rd-navbar-dropdown li li > a,
+.rd-navbar-fixed .rd-navbar-submenu .rd-navbar-megamenu ul li li > a {
+    padding-left: 46px;
+}
+
+.rd-navbar-fixed .rd-navbar-submenu.opened > .rd-navbar-dropdown,
+.rd-navbar-fixed .rd-navbar-submenu.opened > .rd-navbar-megamenu {
+    display: block;
+}
+
+.rd-navbar-fixed .rd-megamenu-list > li > a,
+.rd-navbar-fixed .rd-navbar-dropdown > li > a {
+    display: block;
+    padding: 9px 50px 9px 16px;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.rd-navbar-fixed .rd-megamenu-list > li + li,
+.rd-navbar-fixed .rd-navbar-dropdown > li + li {
+    margin-top: 3px;
+}
+
+.rd-navbar-fixed .rd-megamenu-list > li > a {
+    padding-left: 24px;
+}
+
+.rd-navbar-fixed .rd-navbar-megamenu * + .rd-megamenu-list {
+    margin-top: 10px;
+}
+
+.rd-navbar-fixed .rd-navbar-megamenu * + .rd-megamenu-title {
+    margin-top: 20px;
+}
+
+.rd-navbar-fixed .rd-navbar-megamenu > li + li {
+    margin-top: 20px;
+}
+
+.rd-navbar-fixed .rd-megamenu-title {
+    margin-left: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 0;
+    line-height: 0;
+    color: #0473db;
+}
+
+.rd-navbar-fixed .rd-megamenu-title > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.rd-navbar-fixed .rd-megamenu-title > * + * {
+    margin-left: 8px;
+}
+
+.rd-navbar-fixed .rd-megamenu-icon {
+    font-size: 20px;
+}
+
+.rd-navbar-fixed .rd-megamenu-text {
+    font-size: 12px;
+    line-height: 1.72;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.rd-navbar-fixed .rd-navbar-submenu-toggle {
+    cursor: pointer;
+}
+
+.rd-navbar-fixed .rd-navbar-submenu-toggle::after {
+    content: '\f107';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 34px;
+    font: 400 14px "FontAwesome";
+    line-height: 34px;
+    text-align: center;
+    transition: 0.4s all ease;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.rd-navbar-fixed .rd-navbar-collapse-toggle {
+    display: block;
+    top: 4px;
+    z-index: 1079;
+}
+
+.rd-navbar-fixed .rd-navbar-collapse {
+    text-align: center;
+    position: fixed;
+    top: 56px;
+    right: 0;
+    width: auto;
+    padding: 15px;
+    border-radius: 0;
+    font-size: 15px;
+    transform: translate3d(0, -10px, 0);
+    opacity: 0;
+    transition: .3s;
+    visibility: hidden;
+    z-index: 1077;
+}
+
+.rd-navbar-fixed .rd-navbar-collapse.active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.rd-navbar-fixed .rd-navbar-collapse .list-inline > li {
+    display: block;
+}
+
+.rd-navbar-fixed .rd-navbar-collapse .list-inline > li + li {
+    margin-top: 10px;
+}
+
+.rd-navbar-fixed .rd-navbar-main-element {
+    position: absolute;
+    float: left;
+}
+
+.rd-navbar-fixed .rd-navbar-search .rd-search {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 56px;
+    z-index: 1077;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    transform: translate3d(0, -10px, 0);
+}
+
+.rd-navbar-fixed .rd-navbar-search .rd-search-results-live {
+    display: none;
+}
+
+.rd-navbar-fixed .rd-navbar-search .form-input {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 5px 0 rgba(1, 3, 4, 0.19);
+}
+
+.rd-navbar-fixed .rd-navbar-search .form-input,
+.rd-navbar-fixed .rd-navbar-search .form-label {
+    padding-right: 50px;
+    padding-left: 15px;
+}
+
+.rd-navbar-fixed .rd-navbar-search .rd-search-form-submit {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.rd-navbar-fixed .rd-navbar-search.active .rd-search {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle {
+    display: inline-flex;
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle span {
+    display: inline-block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    font-size: 26px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle span::before, .rd-navbar-fixed .rd-navbar-search-toggle span::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all .3s ease;
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle span::before {
+    content: "";
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    visibility: visible;
+    font-family: "Material Design Icons";
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle span::after {
+    content: "";
+    transform: rotate(-90deg) scale(0.4);
+    opacity: 0;
+    visibility: hidden;
+    font-family: "Material Design Icons";
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle.active span::before {
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(90deg) scale(0.4);
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle.active span::after {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle span {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 48px;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle span::before, .rd-navbar-fixed .rd-navbar-search-toggle span::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all .3s ease;
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle span::before {
+    content: "";
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    visibility: visible;
+    font-family: "fl-bigmug-line";
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle span::after {
+    content: "";
+    transform: rotate(-90deg) scale(0.4);
+    opacity: 0;
+    visibility: hidden;
+    font-family: "fl-bigmug-line";
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle.active span::before {
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(90deg) scale(0.4);
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle.active span::after {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.rd-navbar-fixed [class*='rd-navbar-fixed-element'] {
+    position: fixed;
+    top: 4px;
+    z-index: 1080;
+}
+
+.rd-navbar-fixed .rd-navbar-fixed-element-1 {
+    right: 0;
+}
+
+.rd-navbar-fixed .rd-navbar-fixed-element-2 {
+    right: 42px;
+}
+
+.rd-navbar-fixed .rd-navbar-fixed-element-3 {
+    right: 30px;
+}
+
+.rd-navbar-fixed .rd-navbar-fixed-element-4 {
+    right: 84px;
+}
+
+.rd-navbar-fixed.rd-navbar--is-clone {
+    display: none;
+}
+
+.rd-navbar-fixed .rd-navbar-fixed--visible {
+    display: block;
+}
+
+.rd-navbar-fixed .rd-navbar-fixed--hidden {
+    display: none;
+}
+
+.rd-navbar-fixed .rd-megamenu-banner,
+.rd-navbar-fixed .rd-navbar-basket-wrap {
+    display: none;
+}
+
+.rd-navbar-fixed * + .button {
+    margin-top: 20px;
+}
+
+.rd-navbar-fixed .rd-navbar-panel {
+    color: #151515;
+    box-shadow: 0 0 5px 0 rgba(1, 3, 4, 0.19);
+    background: #ffffff;
+}
+
+.rd-navbar-fixed .rd-navbar-nav-wrap {
+    color: #ffffff;
+    background: #ffffff;
+    border: 1px solid #d7d7d7;
+    box-shadow: 0 0 5px 0 rgba(1, 3, 4, 0.19);
+}
+
+.rd-navbar-fixed .rd-nav-item:hover .rd-nav-link, .rd-navbar-fixed .rd-nav-item.focus .rd-nav-link, .rd-navbar-fixed .rd-nav-item.active .rd-nav-link, .rd-navbar-fixed .rd-nav-item.opened .rd-nav-link {
+    color: #ffffff;
+    background: #0473db;
+}
+
+.rd-navbar-fixed .rd-nav-item:hover > .rd-navbar-submenu-toggle, .rd-navbar-fixed .rd-nav-item.focus > .rd-navbar-submenu-toggle, .rd-navbar-fixed .rd-nav-item.active > .rd-navbar-submenu-toggle, .rd-navbar-fixed .rd-nav-item.opened > .rd-navbar-submenu-toggle {
+    color: #ffffff;
+}
+
+.rd-navbar-fixed .rd-nav-link {
+    color: #151515;
+}
+
+.rd-navbar-fixed .rd-megamenu-list > li > a,
+.rd-navbar-fixed .rd-navbar-dropdown > li > a {
+    color: #151515;
+}
+
+.rd-navbar-fixed .rd-megamenu-list > li:hover > a,
+.rd-navbar-fixed .rd-megamenu-list > li.focus > a,
+.rd-navbar-fixed .rd-megamenu-list > li.active > a,
+.rd-navbar-fixed .rd-megamenu-list > li.opened > a,
+.rd-navbar-fixed .rd-navbar-dropdown > li:hover > a,
+.rd-navbar-fixed .rd-navbar-dropdown > li.focus > a,
+.rd-navbar-fixed .rd-navbar-dropdown > li.active > a,
+.rd-navbar-fixed .rd-navbar-dropdown > li.opened > a {
+    color: #ffffff;
+    background: #0473db;
+}
+
+.rd-navbar-fixed .rd-navbar-submenu-toggle {
+    color: #151515;
+}
+
+.rd-navbar-fixed .rd-navbar-search .rd-search-form-submit, .rd-navbar-fixed .rd-navbar-search .rd-search-form-submit:focus {
+    color: #151515;
+}
+
+.rd-navbar-fixed .rd-navbar-search .rd-search-form-submit:hover, .rd-navbar-fixed .rd-navbar-search .rd-search-form-submit:active {
+    color: #0473db;
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle, .rd-navbar-fixed .rd-navbar-search-toggle:focus {
+    color: #151515;
+}
+
+.rd-navbar-fixed .rd-navbar-search-toggle:hover, .rd-navbar-fixed .rd-navbar-search-toggle:active {
+    color: #0473db;
+}
+
+.rd-navbar-fixed .rd-navbar-collapse {
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 0 rgba(1, 3, 4, 0.19);
+}
+
+html.rd-navbar-fixed-linked .page {
+    padding-top: 56px;
+}
+
+.context-dark .rd-navbar-fixed .brand .brand-logo-dark, .bg-gray-700 .rd-navbar-fixed .brand .brand-logo-dark, .bg-gray-3 .rd-navbar-fixed .brand .brand-logo-dark, .bg-brown-1 .rd-navbar-fixed .brand .brand-logo-dark, .bg-primary .rd-navbar-fixed .brand .brand-logo-dark {
+    display: block;
+}
+
+.context-dark .rd-navbar-fixed .brand .brand-logo-light, .bg-gray-700 .rd-navbar-fixed .brand .brand-logo-light, .bg-gray-3 .rd-navbar-fixed .brand .brand-logo-light, .bg-brown-1 .rd-navbar-fixed .brand .brand-logo-light, .bg-primary .rd-navbar-fixed .brand .brand-logo-light {
+    display: none;
+}
+
+.context-dark .rd-navbar-fixed .form-validation, .bg-gray-700 .rd-navbar-fixed .form-validation, .bg-gray-3 .rd-navbar-fixed .form-validation, .bg-brown-1 .rd-navbar-fixed .form-validation, .bg-primary .rd-navbar-fixed .form-validation,
+.context-dark .rd-navbar-fixed .form-input,
+.bg-gray-700 .rd-navbar-fixed .form-input,
+.bg-gray-3 .rd-navbar-fixed .form-input,
+.bg-brown-1 .rd-navbar-fixed .form-input,
+.bg-primary .rd-navbar-fixed .form-input,
+.context-dark .rd-navbar-fixed .form-label,
+.bg-gray-700 .rd-navbar-fixed .form-label,
+.bg-gray-3 .rd-navbar-fixed .form-label,
+.bg-brown-1 .rd-navbar-fixed .form-label,
+.bg-primary .rd-navbar-fixed .form-label {
+    color: #151515;
+}
+
+.context-dark .rd-navbar-fixed .contacts-classic, .bg-gray-700 .rd-navbar-fixed .contacts-classic, .bg-gray-3 .rd-navbar-fixed .contacts-classic, .bg-brown-1 .rd-navbar-fixed .contacts-classic, .bg-primary .rd-navbar-fixed .contacts-classic {
+    color: #151515;
+}
+
+.context-dark .rd-navbar-fixed .contacts-classic a, .bg-gray-700 .rd-navbar-fixed .contacts-classic a, .bg-gray-3 .rd-navbar-fixed .contacts-classic a, .bg-brown-1 .rd-navbar-fixed .contacts-classic a, .bg-primary .rd-navbar-fixed .contacts-classic a, .context-dark .rd-navbar-fixed .contacts-classic a:focus, .bg-gray-700 .rd-navbar-fixed .contacts-classic a:focus, .bg-gray-3 .rd-navbar-fixed .contacts-classic a:focus, .bg-brown-1 .rd-navbar-fixed .contacts-classic a:focus, .bg-primary .rd-navbar-fixed .contacts-classic a:focus, .context-dark .rd-navbar-fixed .contacts-classic a:active, .bg-gray-700 .rd-navbar-fixed .contacts-classic a:active, .bg-gray-3 .rd-navbar-fixed .contacts-classic a:active, .bg-brown-1 .rd-navbar-fixed .contacts-classic a:active, .bg-primary .rd-navbar-fixed .contacts-classic a:active {
+    color: #777777;
+}
+
+.context-dark .rd-navbar-fixed .contacts-classic a:hover, .bg-gray-700 .rd-navbar-fixed .contacts-classic a:hover, .bg-gray-3 .rd-navbar-fixed .contacts-classic a:hover, .bg-brown-1 .rd-navbar-fixed .contacts-classic a:hover, .bg-primary .rd-navbar-fixed .contacts-classic a:hover {
+    color: #0473db;
+}
+
+.context-dark .rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-dark, .bg-gray-700 .rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-dark, .bg-gray-3 .rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-dark, .bg-brown-1 .rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-dark, .bg-primary .rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-dark,
+.context-dark .rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-light,
+.bg-gray-700 .rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-light,
+.bg-gray-3 .rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-light,
+.bg-brown-1 .rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-light,
+.bg-primary .rd-navbar-fixed.rd-navbar-logo-mobile .brand-logo-light {
+    display: none;
+}

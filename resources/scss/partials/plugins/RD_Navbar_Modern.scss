@@ -1,0 +1,166 @@
+.rd-navbar-modern.rd-navbar-static .rd-navbar-aside-outer,
+.rd-navbar-modern.rd-navbar-static .rd-navbar-main-outer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-main-outer {
+    border-top: 1px solid #e1e1e1;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-aside,
+.rd-navbar-modern.rd-navbar-static .rd-navbar-main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1170px;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-aside {
+    align-items: flex-end;
+    padding: 5px 0 25px;
+}
+
+@media (min-width: 1200px) {
+    .rd-navbar-modern.rd-navbar-static .rd-navbar-aside {
+        padding-top: 15px;
+        padding-bottom: 35px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .rd-navbar-modern.rd-navbar-static .rd-navbar-aside {
+        padding-top: 25px;
+        padding-bottom: 45px;
+    }
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-main {
+    align-items: center;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-collapse,
+.rd-navbar-modern.rd-navbar-static .rd-navbar-button {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-collapse .button {
+    display: none;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-button {
+    display: block;
+    text-align: right;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-panel {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-brand {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 70px;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-brand img {
+    width: auto;
+    height: auto;
+    max-width: 160px;
+    max-height: 70px;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-main-element {
+    display: flex;
+    align-items: center;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-main-element > * + * {
+    margin-left: 18px;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-navbar-nav-wrap {
+    margin-right: 30px;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-nav-item {
+    display: inline-block;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-nav-item.focus .rd-nav-link, .rd-navbar-modern.rd-navbar-static .rd-nav-item.opened .rd-nav-link, .rd-navbar-modern.rd-navbar-static .rd-nav-item.active .rd-nav-link {
+    color: #151515;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-nav-item.focus .rd-nav-link::before, .rd-navbar-modern.rd-navbar-static .rd-nav-item.opened .rd-nav-link::before, .rd-navbar-modern.rd-navbar-static .rd-nav-item.active .rd-nav-link::before {
+    width: 100%;
+    background: #0473db;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-nav-link {
+    padding: 25px 0;
+}
+
+.rd-navbar-modern.rd-navbar-static .rd-nav-link::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    height: 8px;
+    width: 140%;
+    background: transparent;
+    transform: translate3d(-50%, -50%, 0);
+    transition: all .25s ease;
+}
+
+.rd-navbar-modern.rd-navbar-static.rd-navbar--is-stuck, .rd-navbar-modern.rd-navbar-static.rd-navbar--is-clone {
+    box-shadow: 0 0 5px 0 rgba(1, 3, 4, 0.19);
+}
+
+.rd-navbar-modern.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main-outer, .rd-navbar-modern.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main-outer {
+    border-color: transparent;
+}
+
+.rd-navbar-modern.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-aside-outer, .rd-navbar-modern.rd-navbar-static.rd-navbar--is-clone .rd-navbar-aside-outer {
+    display: none;
+}
+
+.rd-navbar-modern.rd-navbar-fixed .rd-navbar-collapse-toggle {
+    width: 32px;
+}
+
+.rd-navbar-modern.rd-navbar-fixed .rd-navbar-basket {
+    top: 16px;
+    right: 36px;
+    padding-right: 10px;
+}
+
+.rd-navbar-modern.rd-navbar-fixed .rd-navbar-button {
+    display: none;
+}
+
+.contacts-ruth {
+    text-align: left;
+}
+
+.contacts-ruth a {
+    font-size: 14px;
+    letter-spacing: .05em;
+}
+
+.contacts-ruth a, .contacts-ruth a:focus, .contacts-ruth a:active {
+    color: #151515;
+}
+
+.contacts-ruth a:hover {
+    color: #0473db;
+}
+
+.contacts-ruth .icon {
+    font-size: 38px;
+    color: #0473db;
+}

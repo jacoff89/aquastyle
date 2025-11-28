@@ -1,0 +1,209 @@
+.event-classic {
+    text-align: center;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.event-classic > .unit > .unit-left {
+    height: 150px;
+}
+
+.event-classic-figure {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.event-classic-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    max-width: none;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+@supports (object-fit: cover) {
+    .event-classic-image {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: none;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+.event-classic-body {
+    padding: 20px 5%;
+}
+
+.event-classic-title {
+    font-weight: 600;
+    letter-spacing: .02em;
+    text-transform: none;
+}
+
+.event-classic-panel {
+    color: #151515;
+    margin-bottom: -5px;
+    margin-left: -16px;
+}
+
+.event-classic-panel:empty {
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.event-classic-panel > * {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 5px;
+    margin-left: 16px;
+}
+
+.event-classic-panel li {
+    vertical-align: middle;
+}
+
+.event-classic-panel li > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.event-classic-panel a, .event-classic-panel a:focus, .event-classic-panel a:active {
+    color: inherit;
+}
+
+.event-classic-panel a:hover {
+    color: #0473db;
+}
+
+.event-classic-panel .icon {
+    margin-right: 8px;
+    font-size: 15px;
+    color: #0473db;
+}
+
+.event-classic-link {
+    color: #0473db;
+}
+
+.event-classic-time {
+    color: rgba(21, 21, 21, 0.34);
+}
+
+.event-classic-hours,
+.event-classic-month,
+.event-classic-date {
+    font-weight: 600;
+    letter-spacing: .02em;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.event-classic-month {
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+.event-classic-hours {
+    margin-left: 10px;
+}
+
+* + .event-classic-panel {
+    margin-top: 8px;
+}
+
+* + .event-classic-text {
+    margin-top: 10px;
+}
+
+* + .event-classic-link {
+    margin-top: 10px;
+}
+
+@media (min-width: 576px) {
+    .event-classic {
+        text-align: left;
+    }
+    .event-classic > .unit {
+        min-height: 310px;
+    }
+    .event-classic > .unit > .unit-left {
+        width: 25%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .event-classic > .unit {
+        min-height: 350px;
+    }
+    .event-classic-body {
+        padding: 30px 5%;
+    }
+    .event-classic-body .unit-body {
+        max-width: 70%;
+    }
+    .event-classic-hours {
+        display: block;
+        margin-left: 0;
+    }
+    * + .event-classic-panel {
+        margin-top: 12px;
+    }
+    * + .event-classic-text {
+        margin-top: 20px;
+    }
+    * + .event-classic-link {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .event-classic > .unit {
+        min-height: 390px;
+    }
+    .event-classic > .unit > .unit-left {
+        width: 30%;
+    }
+    .event-classic-body {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    * + .event-classic-text {
+        margin-top: 30px;
+    }
+    * + .event-classic-link {
+        margin-top: 34px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .event-classic > .unit > .unit-left {
+        width: 35%;
+    }
+    .event-classic-body {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+.context-dark .event-classic, .bg-gray-700 .event-classic, .bg-gray-3 .event-classic, .bg-brown-1 .event-classic, .bg-primary .event-classic {
+    color: #777777;
+}
+
+.context-dark .event-classic-title, .bg-gray-700 .event-classic-title, .bg-gray-3 .event-classic-title, .bg-brown-1 .event-classic-title, .bg-primary .event-classic-title {
+    color: #151515;
+}
+
+.context-dark .event-classic-link, .bg-gray-700 .event-classic-link, .bg-gray-3 .event-classic-link, .bg-brown-1 .event-classic-link, .bg-primary .event-classic-link {
+    color: #0473db;
+}

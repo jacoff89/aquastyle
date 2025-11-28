@@ -1,0 +1,117 @@
+a {
+    transition: all 0.25s ease-in-out;
+}
+
+a, a:focus, a:active, a:hover {
+    text-decoration: none;
+}
+
+a, a:focus, a:active {
+    color: #0473db;
+}
+
+a:hover {
+    color: #034c90;
+}
+
+a[href*='tel'], a[href*='mailto'] {
+    white-space: nowrap;
+}
+
+.link-hover {
+    color: #034c90;
+}
+
+.link-press {
+    color: #034c90;
+}
+
+.privacy-link {
+    display: inline-block;
+}
+
+* + .privacy-link {
+    margin-top: 25px;
+}
+
+@media (min-width: 768px) {
+    * + .privacy-link {
+        margin-top: 45px;
+    }
+}
+
+.link-tag {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.link-tag, .link-tag:focus, .link-tag:active {
+    color: inherit;
+}
+
+.link-tag:hover {
+    color: #0473db;
+}
+
+.link-shop {
+    display: block;
+}
+
+.link-classic {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.9;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    transition: all .25s ease;
+}
+
+.link-classic, .link-classic:focus, .link-classic:active {
+    color: #a3a3a3;
+}
+
+.link-classic:hover {
+    color: #0473db;
+}
+
+.link-classic::after {
+    display: block;
+    content: '';
+    height: 0;
+    width: 100%;
+    border-top: 2px solid;
+    transition: transform .2s ease;
+}
+
+.link-classic:hover {
+    letter-spacing: .3em;
+}
+
+* + .link-classic {
+    margin-top: 20px;
+}
+
+*.row + .link-classic {
+    margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+    *.row + .link-classic {
+        margin-top: 45px;
+    }
+}
+
+.context-dark .link-classic, .bg-gray-700 .link-classic, .bg-gray-3 .link-classic, .bg-brown-1 .link-classic, .bg-primary .link-classic, .context-dark .link-classic:active, .bg-gray-700 .link-classic:active, .bg-gray-3 .link-classic:active, .bg-brown-1 .link-classic:active, .bg-primary .link-classic:active, .context-dark .link-classic:focus, .bg-gray-700 .link-classic:focus, .bg-gray-3 .link-classic:focus, .bg-brown-1 .link-classic:focus, .bg-primary .link-classic:focus {
+    color: inherit;
+}
+
+.link-primary, .link-primary:active, .link-primary:focus {
+    color: #0473db;
+}

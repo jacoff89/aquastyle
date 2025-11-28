@@ -1,0 +1,36 @@
+.block-center, .block-sm, .block-lg {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block-sm {
+    max-width: 560px;
+}
+
+.block-lg {
+    max-width: 768px;
+}
+
+.block-center {
+    padding: 10px;
+}
+
+.block-center:hover .block-center-header {
+    background-color: #0473db;
+}
+
+.block-center-title {
+    background-color: #ffffff;
+}
+
+@media (max-width: 1599.98px) {
+    .block-center {
+        padding: 20px;
+    }
+    .block-center:hover .block-center-header {
+        background-color: #ffffff;
+    }
+    .block-center-header {
+        background-color: #0473db;
+    }
+}

@@ -1,0 +1,11 @@
+.rd-navbar-fullwidth {
+    display: block;
+}
+
+.rd-navbar-fullwidth .rd-navbar-nav > li + li {
+    margin-left: 20px;
+}
+
+.rd-navbar-fullwidth.rd-navbar--is-stuck .rd-navbar-main, .rd-navbar-fullwidth.rd-navbar--is-clone .rd-navbar-main {
+    padding: 10px 0;
+}

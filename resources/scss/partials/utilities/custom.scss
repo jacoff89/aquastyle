@@ -1,0 +1,455 @@
+.height-fill {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.height-fill > * {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.object-inline {
+    white-space: nowrap;
+}
+
+.object-inline > * {
+    display: inline-block;
+    min-width: 20px;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.object-inline > * + * {
+    margin-left: 5px;
+}
+
+.oh {
+    position: relative;
+    overflow: hidden;
+}
+
+.text-decoration-lines {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.text-decoration-lines-content {
+    position: relative;
+    display: inline-block;
+    min-width: 170px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.text-decoration-lines-content::before, .text-decoration-lines-content::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: #d7d7d7;
+    top: 50%;
+    width: 100vw;
+}
+
+.text-decoration-lines-content::before {
+    left: 0;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.text-decoration-lines-content::after {
+    right: 0;
+    transform: translate3d(100%, 0, 0);
+}
+
+* + .text-decoration-lines {
+    margin-top: 30px;
+}
+
+p.rights {
+    letter-spacing: 0;
+    color: #777777;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+p.rights a, p.rights a:focus, p.rights a:active {
+    color: inherit;
+}
+
+p.rights a:hover {
+    color: #0473db;
+}
+
+.context-dark p.rights, .bg-gray-700 p.rights, .bg-gray-3 p.rights, .bg-brown-1 p.rights, .bg-primary p.rights {
+    color: #ffffff;
+}
+
+.context-dark p.rights a:hover, .bg-gray-700 p.rights a:hover, .bg-gray-3 p.rights a:hover, .bg-brown-1 p.rights a:hover, .bg-primary p.rights a:hover {
+    color: #f8ea49;
+}
+
+[style*='z-index: 1000;'] {
+    z-index: 1101 !important;
+}
+
+.text-block > * {
+    margin-left: .125em;
+    margin-right: .125em;
+}
+
+@media (min-width: 992px) {
+    .inset-lg-bottom-10 {
+        padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .inset-xl-left-35 {
+        padding-left: 35px;
+    }
+    .inset-xl-right-20 {
+        padding-right: 20px;
+    }
+    .inset-xl-right-30 {
+        padding-right: 30px;
+    }
+    .inset-xl-right-35 {
+        padding-right: 35px;
+    }
+    .inset-xl-right-50 {
+        padding-right: 50px;
+    }
+    .inset-xl-right-55 {
+        padding-right: 55px;
+    }
+    .inset-xl-right-70 {
+        padding-right: 70px;
+    }
+    .inset-xl-right-100 {
+        padding-right: 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .typography-style-1 p {
+        max-width: 95%;
+    }
+}
+
+.aside-typography p + h2 {
+    margin-top: 16px;
+}
+
+.aside-typography h2 + h3 {
+    margin-top: 12px;
+}
+
+.aside-typography h3 + h4 {
+    margin-top: 22px;
+}
+
+.box-color-line {
+    display: flex;
+    justify-content: center;
+    margin-left: -8px;
+}
+
+.box-color-line > * {
+    margin-left: 8px;
+}
+
+.box-color-item {
+    width: 53px;
+    height: 53px;
+}
+
+* + .box-color {
+    margin-top: 16px;
+}
+
+.box-color-line + .box-color-line {
+    margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+    .box-color-line {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 992px) {
+    .aside-typography-item {
+        padding-left: 30px;
+        border-left: 1px solid #e1e1e1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .aside-typography {
+        padding-top: 20px;
+    }
+}
+
+.title-group p + p {
+    margin-top: 0;
+}
+
+.title-group h4 + p {
+    margin-top: 22px;
+}
+
+.title-classic {
+    margin-bottom: -10px;
+    margin-left: -40px;
+}
+
+.title-classic:empty {
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.title-classic > * {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+@media (min-width: 768px) {
+    .title-classic {
+        display: flex;
+        align-items: center;
+    }
+    .title-classic-title {
+        max-width: 40%;
+        flex-shrink: 0;
+    }
+    .title-classic-title + .title-classic-subtitle {
+        padding-left: 40px;
+        border-left: 1px solid #e1e1e1;
+    }
+}
+
+.title-modern {
+    font-size: 10em;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: .05em;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.14);
+    animation: titleColor 3s linear infinite;
+}
+
+.title-modern + h4 {
+    margin-top: 34px;
+}
+
+@media (min-width: 992px) {
+    .title-modern {
+        font-size: 13em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .title-modern {
+        font-size: 15em;
+    }
+}
+
+@media (min-width: 1600px) {
+    .title-modern {
+        font-size: 20em;
+    }
+}
+
+@keyframes titleColor {
+    50% {
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+.title-style-1 {
+    letter-spacing: .05em;
+    text-transform: none;
+    font-family: "Comfortaa", cursive;
+    color: #0473db;
+}
+
+.title-style-2 {
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #0473db;
+}
+
+.title-style-3 {
+    font-weight: 500;
+    letter-spacing: .15em;
+}
+
+.title-style-4 {
+    font-weight: 300;
+    letter-spacing: .075em;
+}
+
+.title-style-5 {
+    font-weight: 400;
+    letter-spacing: .075em;
+}
+
+.title-style-6 {
+    letter-spacing: .02em;
+    font-family: "Comfortaa", cursive;
+    color: #0473db;
+}
+
+.title-style-7 {
+    font-weight: 700;
+    letter-spacing: .075em;
+    text-transform: none;
+    font-family: "Comfortaa", cursive;
+    color: #0473db;
+}
+
+.title-style-8 {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.title-style-9 {
+    font-weight: 500;
+    letter-spacing: .075em;
+    text-transform: none;
+    line-height: 1.31;
+}
+
+.title-style-10 {
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.title-style-11 {
+    font-weight: 700;
+    text-transform: none;
+}
+
+.title-decor-1 {
+    position: relative;
+    font-weight: 300;
+    z-index: 1;
+}
+
+.title-decor-1::before {
+    position: absolute;
+    content: '';
+    bottom: 22%;
+    left: 0;
+    width: 94%;
+    height: 10%;
+    background: #fff669;
+    z-index: -1;
+}
+
+* + .title-style-3 {
+    margin-top: 6px;
+}
+
+* + .title-style-4 {
+    margin-top: 6px;
+}
+
+.title-style-1 + h2 {
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    * + .title-style-3 {
+        margin-top: 12px;
+    }
+    * + .title-style-4 {
+        margin-top: 12px;
+    }
+    * + .title-style-5 {
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    * + .title-style-4 {
+        margin-top: 20px;
+    }
+    .title-style-4 + .tabs-line {
+        margin-top: 50px;
+    }
+    .title-style-5 + .button {
+        margin-top: 35px;
+    }
+}
+
+@media (min-width: 1200px) {
+    * + .title-style-5 {
+        margin-top: 35px;
+    }
+}
+
+.context-dark .title-style-6, .bg-gray-700 .title-style-6, .bg-gray-3 .title-style-6, .bg-brown-1 .title-style-6, .bg-primary .title-style-6,
+.context-dark .title-style-7,
+.bg-gray-700 .title-style-7,
+.bg-gray-3 .title-style-7,
+.bg-brown-1 .title-style-7,
+.bg-primary .title-style-7 {
+    color: #f8ea49;
+}
+
+.group .title-style-6 {
+    margin-bottom: 4px;
+}
+
+.bordered-1 {
+    overflow: hidden;
+}
+
+.bordered-1 > div::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -1px;
+    width: 0;
+    height: 40%;
+    border-left: 1px solid #e1e1e1;
+    transform: translate3d(0, -50%, 0);
+}
+
+@media (min-width: 768px) {
+    .bordered-2 > div + div > * {
+        padding-top: 40px;
+        border-top: 1px solid #e1e1e1;
+    }
+}
+
+@media (min-width: 992px) {
+    .bordered-2 > div + div > * {
+        padding-top: 50px;
+        border-top: 1px solid #e1e1e1;
+    }
+}
+
+.gutters-10 {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.gutters-10 [class*='col-'] {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.gutters-20 {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.gutters-20 [class*='col-'] {
+    padding-left: 10px;
+    padding-right: 10px;
+}
