@@ -10,7 +10,11 @@
                         <!-- RD Navbar Toggle-->
                         <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                         <!-- RD Navbar Brand-->
-                        <div class="rd-navbar-brand"><a class="brand" href="{{ route('home') }}"><img class="brand-logo-dark" src="{{ Vite::asset('resources/images/logo-default-120x45.png') }}" alt="" width="120" height="45" srcset="{{ Vite::asset('resources/images/logo-default-240x90.png') }} 2x"/><img class="brand-logo-light" src="{{ Vite::asset('resources/images/logo-inverse-119x43.png') }}" alt="" width="119" height="43" srcset="{{ Vite::asset('resources/images/logo-inverse-238x87.png') }} 2x"/></a>
+                        <div class="rd-navbar-brand">
+                            <a class="brand" href="{{ route('home') }}">
+                                <img class="brand-logo-dark" src="{{ Vite::asset('resources/images/aquastyle-logo.png') }}" alt="" width="100" srcset="{{ Vite::asset('resources/images/aquastyle-logo.png') }} 2x"/>
+                                <img class="brand-logo-light" src="{{ Vite::asset('resources/images/aquastyle-logo.png') }}" alt="" width="100" srcset="{{ Vite::asset('resources/images/aquastyle-logo.png') }} 2x"/>
+                            </a>
                         </div>
                     </div>
                     <div class="rd-navbar-nav-wrap">
