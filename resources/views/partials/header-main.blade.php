@@ -7,9 +7,18 @@
                 <div class="rd-navbar-aside">
                     <div class="rd-navbar-collapse">
                         <ul class="contacts-classic">
-                            <li><span class="contacts-classic-title">Позвоните нам:</span> <a href="tel:+73512353524">+7 (351) 235-35-24</a>
+                            <li>
+                                <span class="contacts-classic-title">Позвоните нам:</span>
                             </li>
-                            <li><a href="mailto:aquastyl74@mail.ru">aquastyl74@mail.ru</a></li>
+                            <li>
+                                <a href="tel:+79080853524"><span class="icon mdi mdi-phone"></span> +7 (908) 085-35-24</a>
+                            </li>
+                            <li>
+                                <a href="tel:2353524"><span class="icon mdi mdi-phone"></span> 235-35-24</a>
+                            </li>
+                            <li>
+                                <a href="mailto:aquastyl74@mail.ru"><span class="icon mdi mdi-email-outline"></span> aquastyl74@mail.ru</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- RD Navbar Panel-->
