@@ -1,0 +1,125 @@
+name: Deploy (Reusable)
+
+on:
+  workflow_call:
+    secrets:
+      SSH_DEPLOY_KEY:
+        required: true
+    inputs:
+      ssh_host:
+        required: true
+        type: string
+      ssh_port:
+        required: true
+        type: number
+      ssh_user:
+        required: true
+        type: string
+      project_dir:
+        required: true
+        type: string
+      archive_name:
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      SSH_HOST: ${{ inputs.ssh_host }}
+      SSH_PORT: ${{ inputs.ssh_port }}
+      SSH_USER: ${{ inputs.ssh_user }}
+      PROJECT_DIR: ${{ inputs.project_dir }}
+      ARCHIVE_NAME: ${{ inputs.archive_name }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Архивация репозитория
+        run: |
+          zip -r $ARCHIVE_NAME ./ \
+            -x *.git* \
+            -x *.env* \
+            -x /storage/* \
+            -x *.docker* \
+            -x *docker*
+
+      - name: Создание SSH ключа
+        run: |
+          echo "${{ secrets.SSH_DEPLOY_KEY }}" > private_key
+          chmod 600 private_key
+
+      - name: Запускаем скрипт получения активной версии
+        id: active
+        run: |
+          ACTIVE=$(ssh -p $SSH_PORT -i private_key -o StrictHostKeyChecking=no \
+            $SSH_USER@$SSH_HOST "bash ~/$PROJECT_DIR/toggle-nginx.sh")
+          echo "active=$ACTIVE" >> $GITHUB_OUTPUT
+
+      - name: Определяем новую версию
+        id: vars
+        run: |
+          if [ "${{ steps.active.outputs.active }}" = "blue" ]; then
+            echo "ACTIVE=blue" >> $GITHUB_OUTPUT
+            echo "NEW=green" >> $GITHUB_OUTPUT
+          else
+            echo "ACTIVE=green" >> $GITHUB_OUTPUT
+            echo "NEW=blue" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Копирование проекта на сервер
+        run: |
+          scp -P $SSH_PORT -i private_key -o StrictHostKeyChecking=no \
+            $ARCHIVE_NAME $SSH_USER@$SSH_HOST:~/$PROJECT_DIR/
+
+      - name: Распаковка проекта
+        run: |
+          ssh -p $SSH_PORT -i private_key -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST '
+            mkdir -p ~/'"$PROJECT_DIR"'/app-${{ steps.vars.outputs.NEW }}
+            cd ~/'"$PROJECT_DIR"'/app-${{ steps.vars.outputs.NEW }}
+            unzip ~/'"$PROJECT_DIR"'/'"$ARCHIVE_NAME"'
+            rm ~/'"$PROJECT_DIR"'/'"$ARCHIVE_NAME"'
+            cp ../.env .
+          '
+
+      - name: Новый контейнер, зависимости, миграции
+        run: |
+          ssh -p $SSH_PORT -i private_key -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST '
+            cd ~/'"$PROJECT_DIR"'
+            docker compose up -d php-fpm-${{ steps.vars.outputs.NEW }}
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} \
+              ln -s /var/www/html/storage /var/www/html/app-${{ steps.vars.outputs.NEW }}/storage
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} \
+              composer install --no-dev --optimize-autoloader
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} \
+              php artisan migrate --force
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} \
+              php artisan storage:link
+          '
+
+      - name: Билдим фронтенд
+        run: |
+          ssh -p $SSH_PORT -i private_key -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST '
+            cd ~/'"$PROJECT_DIR"'
+            docker compose run --rm nodejs-${{ steps.vars.outputs.NEW }}
+          '
+
+      - name: Переключение на новую версию
+        run: |
+          ssh -p $SSH_PORT -i private_key -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST '
+            cd ~/'"$PROJECT_DIR"'
+            bash toggle-nginx.sh switch
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan optimize:clear
+            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan optimize
+          '
+
+      - name: Очистка старой версии
+        run: |
+          ssh -p $SSH_PORT -i private_key -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST '
+            sleep 5
+            cd ~/'"$PROJECT_DIR"'
+            docker compose stop php-fpm-${{ steps.vars.outputs.ACTIVE }}
+            docker compose rm -f php-fpm-${{ steps.vars.outputs.ACTIVE }}
+            rm -rf ~/'"$PROJECT_DIR"'/app-${{ steps.vars.outputs.ACTIVE }}
+          '

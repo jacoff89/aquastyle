@@ -7,74 +7,12 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Архивация репозитория
-        run: "zip -r prod_archive.zip ./ -x *.git* -x *.env* -x /storage/* -x *.docker* -x *docker*"
-      - name: Создание SSH ключа
-        run: |
-          echo "${{ secrets.SSH_DEPLOY_KEY }}" > private_key
-          chmod 600 private_key
-      - name: Запускаем скрипт получения активной версии
-        id: active
-        run: |
-          ACTIVE=$(ssh -p 2622 -i private_key -o StrictHostKeyChecking=no aquastyle@83.142.160.165 "\
-            bash ~/aquastyle-prod/toggle-nginx.sh \
-          ")
-          echo "active=$ACTIVE" >> $GITHUB_OUTPUT
-      - name: Определяем новую версию
-        id: vars
-        run: |
-          if [ "${{ steps.active.outputs.active }}" = "blue" ]; then
-            echo "ACTIVE=blue" >> $GITHUB_OUTPUT
-            echo "NEW=green" >> $GITHUB_OUTPUT
-          else
-            echo "ACTIVE=green" >> $GITHUB_OUTPUT
-            echo "NEW=blue" >> $GITHUB_OUTPUT
-          fi
-      - name: Копирование проекта на сервер
-        run: |
-          scp -P 2622 -i private_key -o StrictHostKeyChecking=no prod_archive.zip \
-          aquastyle@83.142.160.165:~/aquastyle-prod/
-      - name: Распаковка проекта
-        run: |
-          ssh -p 2622 -i private_key -o StrictHostKeyChecking=no aquastyle@83.142.160.165 '
-            # Создаем новую директорию для развертывания
-            mkdir -p ~/aquastyle-prod/app-${{ steps.vars.outputs.NEW }}
-            cd ~/aquastyle-prod/app-${{ steps.vars.outputs.NEW }}
-
-            # Распаковываем архив и удаляем его
-            unzip ~/aquastyle-prod/prod_archive.zip
-            rm ~/aquastyle-prod/prod_archive.zip
-
-            # Настраиваем окружение
-            cp ../.env .
-
-            # Поднимаем новый PHP контейнер
-            cd ~/aquastyle-prod
-            docker compose up -d php-fpm-${{ steps.vars.outputs.NEW }}
-
-            # Устанавливаем зависимости и выполняем миграции
-            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} ln -s /var/www/html/storage /var/www/html/app-${{ steps.vars.outputs.NEW }}/storage
-            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} composer install --no-dev --optimize-autoloader
-            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan migrate --force
-
-            # Настраиваем хранилище
-            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan storage:link
-
-            # Билдим фронтенд
-            docker compose run --rm nodejs-${{ steps.vars.outputs.NEW }}
-
-            # Переключаем на новую версию и обновляем кеш
-            bash toggle-nginx.sh switch
-            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan optimize:clear
-            docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} php artisan optimize
-            sleep 5
-
-            # Останавливаем контейнер и удаляем папку со старой версией
-            docker compose stop php-fpm-${{ steps.vars.outputs.ACTIVE }}
-            docker compose rm -f php-fpm-${{ steps.vars.outputs.ACTIVE }}
-            rm -rf ~/aquastyle-prod/app-${{ steps.vars.outputs.ACTIVE }}
-          '
+    uses: ./.github/workflows/deploy-reusable.yml
+    with:
+      ssh_host: 83.142.160.165
+      ssh_port: 2622
+      ssh_user: aquastyle
+      project_dir: aquastyle-prod
+      archive_name: prod_archive.zip
+    secrets:
+      SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
