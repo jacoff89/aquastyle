@@ -2,7 +2,7 @@
 
 return [
     'version' => [
-        'tiny' => '8.0.2',
+        'tiny' => '7.0.0',
         'language' => [
             // https://cdn.jsdelivr.net/npm/tinymce-i18n@latest/
             'version' => '25.8.4',
@@ -10,7 +10,7 @@ return [
         ],
         'licence_key' => env('TINY_LICENSE_KEY', 'no-api-key'),
     ],
-    'provider' => 'cloud', // cloud|vendor
+    'provider' => 'vendor', // cloud|vendor
     // 'direction' => 'rtl',
 
     /**
