@@ -38,6 +38,10 @@ services:
 
   nodejs:
     image: node:25
+    environment:
+      HTTP_PROXY: ${HTTP_PROXY}
+      HTTPS_PROXY: ${HTTP_PROXY}
+      NO_PROXY: localhost,127.0.0.1,.local
     container_name: aquastyle-nodejs
     working_dir: /var/www/html
     user: "${UID}:${GID}"
@@ -49,6 +53,10 @@ services:
 
   nodejs-build:
     image: node:25
+    environment:
+      HTTP_PROXY: ${HTTP_PROXY}
+      HTTPS_PROXY: ${HTTP_PROXY}
+      NO_PROXY: localhost,127.0.0.1,.local
     container_name: aquastyle-nodejs-build
     working_dir: /var/www/html
     volumes:

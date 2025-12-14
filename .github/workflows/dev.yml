@@ -54,7 +54,7 @@ jobs:
 
             # Поднимаем новый PHP контейнер
             cd ~/aquastyle-dev
-            docker compose up --build -d php-fpm-${{ steps.vars.outputs.NEW }}
+            docker compose up -d php-fpm-${{ steps.vars.outputs.NEW }}
 
             # Устанавливаем зависимости и выполняем миграции
             docker compose exec php-fpm-${{ steps.vars.outputs.NEW }} ln -s /var/www/html/storage /var/www/html/app-${{ steps.vars.outputs.NEW }}/storage
