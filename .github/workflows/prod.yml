@@ -9,8 +9,8 @@ jobs:
   deploy:
     uses: ./.github/workflows/deploy-reusable.yml
     with:
-      ssh_host: 83.142.160.165
-      ssh_port: 2622
+      ssh_host: 89.169.0.212
+      ssh_port: 22
       ssh_user: aquastyle
       project_dir: aquastyle-prod
       archive_name: prod_archive.zip
