@@ -48,7 +48,7 @@ services:
     volumes:
       - .:/var/www/html
     ports:
-      - "127.0.0.1:5173:5173"
+      - "127.0.0.1:5174:5174"
     command: sh -c "[ -d node_modules ] || npm ci && npm run dev"
 
   nodejs-build:

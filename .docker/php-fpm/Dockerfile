@@ -1,4 +1,4 @@
-FROM phpdockerio/php:8.4-fpm
+FROM phpdockerio/php:8.5-fpm
 WORKDIR '/var/www/html'
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -8,7 +8,7 @@ RUN usermod -u ${UID} ubuntu && groupmod -g ${GID} ubuntu
 
 # Install FPM
 RUN apt-get update \
-    && apt-get -y --no-install-recommends install php-zip unzip php8.4-mysql php-sqlite3 php8.4-bcmath php8.4-intl php8.4-xml php8.4-gd \
+    && apt-get -y --no-install-recommends install php-zip unzip php8.5-mysql php-sqlite3 php8.5-bcmath php8.5-intl php8.5-xml php8.5-gd \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
@@ -30,4 +30,4 @@ RUN mkdir -p /run/php \
 USER ubuntu
 
 # Запуск php-fpm
-CMD ["/usr/sbin/php-fpm8.4", "-O"]
+CMD ["/usr/sbin/php-fpm8.5", "-O"]
