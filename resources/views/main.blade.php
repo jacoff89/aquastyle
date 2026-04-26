@@ -2,34 +2,24 @@
 
 @section('content')
     <!-- Swiper-->
+
     <section class="section swiper-container swiper-slider swiper-slider-4" data-loop="true" data-autoplay="6000" data-simulate-touch="false">
         <div class="swiper-wrapper context-dark">
-            <div class="swiper-slide swiper-slide-1" data-slide-bg="{{ Vite::asset('resources/images/slide-2.jpg') }}">
-                <div class="swiper-slide-caption section-md text-sm-start">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-8 col-md-8 col-xl-7">
-                                <h1 class="swiper-title-1" data-caption-animate="fadeInLeft" data-caption-delay="100">Дайвинг-центр "Аквастиль"<br class="d-none d-xl-block"> В Челябинске на Урале</h1>
-                                <h5 class="swiper-title-2 text-width-medium font-sec" data-caption-animate="fadeInLeft" data-caption-delay="250">Дайвинг, подводная охота, фридайвинг. Обучение от новичка до инструктора.</h5>
-                                <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="400"><a class="button button-lg button-shadow-4 button-secondary button-zakaria" href="#form">Оставить заявку</a></div>
+            @foreach ($mainSlides as $mainSlide)
+                <div class="swiper-slide swiper-slide-1" data-slide-bg="{{ asset('storage/' . $mainSlide->image) }}">
+                    <div class="swiper-slide-caption section-md text-sm-start">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-8 col-md-8 col-xl-7">
+                                    <h1 class="swiper-title-1" data-caption-animate="fadeInLeft" data-caption-delay="100">{{ $mainSlide->text1 }}</h1>
+                                    <h5 class="swiper-title-2 text-width-medium font-sec" data-caption-animate="fadeInLeft" data-caption-delay="250">{{ $mainSlide->text2 }}</h5>
+                                    <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="400"><a class="button button-lg button-shadow-4 button-secondary button-zakaria" href="#form">Оставить заявку</a></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-slide swiper-slide-1" data-slide-bg="{{ Vite::asset('resources/images/slide-1.jpg') }}">
-                <div class="swiper-slide-caption section-md text-sm-start">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-8 col-md-8 col-xl-7">
-                                <h1 class="swiper-title-1 text-spacing-0" data-caption-animate="fadeInLeft" data-caption-delay="100">Наслаждайтесь подводным миром<br class="d-none d-xl-block"> Ныряйте с нами</h1>
-                                <h5 class="swiper-title-2 text-width-medium font-sec" data-caption-animate="fadeInLeft" data-caption-delay="250">Мы предлагаем широкий выбор туров и мест для подводного плавания с аквалангом для всех желающих.</h5>
-                                <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="400"><a class="button button-lg button-shadow-4 button-secondary button-zakaria" href="#form">Оставить заявку</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <!-- Swiper Pagination-->
         <div class="swiper-pagination"></div>
@@ -43,24 +33,14 @@
             <h3 class="wow fadeScale">Услуги</h3>
             <!-- Owl Carousel-->
             <div class="owl-carousel owl-style-8" data-items="1" data-sm-items="2" data-lg-items="3" data-margin="30" data-dots="true" data-mouse-drag="false">
-                <article class="box-info-modern wow slideInUp" data-wow-delay=".1s"><a class="box-info-modern-figure" href="#form"><img src="{{ Vite::asset('resources/images/about-1-340x243.jpg') }}" alt="" width="340" height="243"/></a>
-                    <h4 class="box-info-modern-title"><a href="#">Базовый курс по дайвингу</a></h4>
-                    <div class="box-info-modern-text">Обучение дайвингу (Дайвер 1 звезда). <br>Погружение до 18 метров.</div>
-                    <h6 class="box-info-modern-title">от 30 000 рублей</h6>
-                    <a class="box-info-modern-link" href="#form">Записаться</a>
-                </article>
-                <article class="box-info-modern wow slideInUp"><a class="box-info-modern-figure" href="#"><img src="{{ Vite::asset('resources/images/about-2-340x243.jpg') }}" alt="" width="340" height="243"/></a>
-                    <h4 class="box-info-modern-title"><a href="#form">Пробное погружение</a></h4>
-                    <div class="box-info-modern-text">Inter dive - Пробное погружение Это самый первый и запоминающийся этап знакомства с подводным миром. Для знакомства с дайвингом не требуется специальная подготовка, опыт погружений и обращения со снаряжением. Инструктор все сделает за Вас!</div>
-                    <h6 class="box-info-modern-title">от 6 000 рублей</h6>
-                    <a class="box-info-modern-link" href="#form">Записаться</a>
-                </article>
-                <article class="box-info-modern wow slideInUp" data-wow-delay=".1s"><a class="box-info-modern-figure" href="#"><img src="{{ Vite::asset('resources/images/about-3-340x243.jpg') }}" alt="" width="340" height="243"/></a>
-                    <h4 class="box-info-modern-title"><a href="#form">Фридайвинг. <br>Базовый курс</a></h4>
-                    <div class="box-info-modern-text">Базовый курс по основам ФРИДАЙВИНГА. Курс по подготовке фридайверов, даст Вам знания и навыки, необходимые для планирования и осуществления погружений на задержке дыхания</div>
-                    <h6 class="box-info-modern-title">26 000 рублей</h6>
-                    <a class="box-info-modern-link" href="#form">Записаться</a>
-                </article>
+                @foreach ($services as $service)
+                    <article class="box-info-modern wow slideInUp" data-wow-delay=".1s"><a class="box-info-modern-figure" href="#form"><img src="{{ asset('storage/' . $service->image) }}" alt="" width="340" height="243"/></a>
+                        <h4 class="box-info-modern-title">{{ $service->title }}</h4>
+                        <div class="box-info-modern-text">{{ $service->description }}</div>
+                        <h6 class="box-info-modern-title">от {{ $service->formatted_price }}</h6>
+                        <a class="box-info-modern-link" href="#form">Записаться</a>
+                    </article>
+                @endforeach
             </div>
         </div>
     </section>

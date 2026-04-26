@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
@@ -13,6 +14,28 @@ class Service extends Model
         'image',
         'price'
     ];
+
+    protected function formattedPrice(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+                $price = (int) $this->price;
+
+                $formatted = number_format($price, 0, '.', ' ');
+
+                $cases = [2, 0, 1, 1, 1, 2];
+                $titles = ['рубль', 'рубля', 'рублей'];
+
+                $word = $titles[
+                ($price % 100 > 4 && $price % 100 < 20)
+                    ? 2
+                    : $cases[min($price % 10, 5)]
+                ];
+
+                return "{$formatted} {$word}";
+            }
+        );
+    }
 
     protected static function booted(): void
     {
